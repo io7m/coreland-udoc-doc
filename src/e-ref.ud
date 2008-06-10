@@ -1,0 +1,21 @@
+(section
+  (title "ref")
+  (ref "element_ref")
+
+  (para-verbatim tag_synopsis
+"(ref \"refname\")")
+
+  (para "The " (item tag_name "ref") " tag specifies an internal
+  document reference point.  The required argument to " (item tag_name
+  "ref") " names the reference point so that it can be referred to by
+  other tags such as " (link "element_link" "link") ".")
+
+  (para "The tag will be processed in an output format specific manner.
+  In HTML, for example, the tag will emit a named anchor, prefixed with
+  \"r_\" in order to allow specific page positions to be linked to.")
+
+  (section
+    (title "specification")
+    (para "The " (item tag_name "ref") " tag takes a reference name as a
+    string parameter.")
+    (para "The " (item tag_name "ref") " tag may be placed anywhere.")))

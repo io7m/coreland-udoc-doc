@@ -1,0 +1,22 @@
+(section
+  (title "link_ext")
+  (ref "element_link_ext")
+
+  (para-verbatim tag_synopsis
+"(link-ext \"url://domain.tld/\")
+(link-ext \"url://domain.tld/\" \"replacement text\")")
+
+  (para "The " (item tag_name "link_ext") " tag specifies an external URL link.
+  The URL will be processed in an output format specific manner "
+  (footnote (item "A " (item tag_name "link-ext") " tag will become a clickable
+  anchor in HTML, for example.")) ".")
+
+  (para "The tag's second, optional parameter is a string of text that will be
+  displayed instead of the raw URL, when using an output format that is capable
+  of it (HTML, ConTeXt, etc).")
+
+  (section
+    (title "specification")
+    (para "The " (item tag_name "link-ext") " tag takes a URL as a string parameter
+    and optionally takes a string of replacement text.")
+    (para "The " (item tag_name "link-ext") " tag may be placed anywhere.")))

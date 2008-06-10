@@ -1,0 +1,67 @@
+(section
+  (title "orientation")
+
+  ; overview
+
+  (section
+    (title "overview")
+
+    (para (item package "udoc") " is a package to process abstract
+    documents written as " (link-ext
+    "http://people.csail.mit.edu/rivest/Sexp.txt" "s-expressions") " and
+    produce output in various formats. It is similar to " (link-ext
+    "http://www.docbook.org/" "DocBook") " but only defines structural,
+    not semantic, elements."))
+
+    (para (item package "udoc") " is not intended to replace XML or any
+    other generic markup language. It is a documentation language, meant
+    as a common ground for easy conversion to other presentation formats.")
+
+  ; simplicity
+
+  (section
+    (title "simplicity")
+
+    (para (item package "udoc") " defines an extremely minimal set of
+    elements (20 at the time of writing) meaning document source is easy
+    to understand and the learning curve is shallow.")
+
+    (para "The source format is a subset of " (link-ext
+    "http://people.csail.mit.edu/rivest/Sexp.txt" "s-expression") "
+    syntax and makes hand-writing extremely comfortable (as opposed to
+    XML syntax, which requires specialized editors and is infamous for
+    causing repetitive strain injury due to heavy redundancy).")
+
+    (para "The simplicity of the source format guarantees easy
+    conversion to future markup document formats should the author wish
+    to do so.")
+
+    (para (item package "udoc") " documents may be written to any level
+    of granularity. There are very, very few restrictions on document
+    structure.  There is no lower limit on document size (one paragraph
+    per file is possible), allowing for easy automatic partial or
+    complete document generation (consider, for example, a document that
+    uses the output of an external program to include the \"latest
+    news\" at the time of publishing)."))
+
+  ; implementation
+
+  (section
+    (title "implementation")
+
+    (para "The package is implemented in less than 10,000 lines of pure
+    ISO C and compilation produces executables with no library
+    or file dependencies."))
+
+  ; customisation
+
+  (section
+    (title "customisation")
+
+    (para (item package "udoc") " documents produce completely
+    \"unstyled\" output markup that is intended to be very simple to
+    customise. Output format specific code can be inserted transparently
+    to essentially allow any degree of control that would have been
+    possible had the output text been hand-written, manually."))
+
+) ; end of section

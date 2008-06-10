@@ -1,0 +1,56 @@
+/* generic classes */
+body {
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+  color: #000;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+a { }
+a:link    { color: #555;}
+a:visited { color: #333;}
+a:hover   { color: #666;}
+a:active  { color: #555;}
+
+hr {
+  height: 1px;
+  border: 0;
+  color: #ccc;
+  background-color: #ccc;
+}
+
+.docid {
+  color: #999;
+  font-family: monospace;
+}
+
+.ud_navbar_foot { margin-top: 1em; }
+.ud_navbar_head { }
+.ud_toc { }
+.ud_footnotes { border-top: 1px solid #ddd; padding-top: 1em; }
+.ud_footnote_tab { }
+
+.filename,
+.func,
+.func_param,
+.package,
+.struct,
+.struct_field,
+.tag_name
+{
+  font-family: monospace;
+}
+
+.example {
+  border: 1px solid #ddd;
+  padding: 1em;
+}
+
+.quote,
+.source,
+.tag_synopsis
+{
+  border: 1px solid #ddd;
+  padding: 1em;
+  font-family: monospace;
+}

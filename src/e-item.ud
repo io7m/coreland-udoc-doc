@@ -1,0 +1,24 @@
+(section
+  (title "item")
+  (ref "element_item")
+
+  (para-verbatim tag_synopsis
+"(item ...)")
+
+  (para "The " (item tag_name "item") " tag specifies an 'item'. An item
+  is a less significant structural element than a " (link "element_para"
+  "paragraph") " and is intended to be used to denote names, constants,
+  etc.")
+
+  (para-verbatim example
+"(para \"An apartment in \" (item location \"Paris\") \".\")
+(item package \"udoc\")")
+
+  (section
+    (title "specification")
+    (para "The " (item tag_name "item") " tag takes any number of string, symbol
+      or list parameters.")
+    (para "The " (item tag_name "item") " tag may be placed anywhere.")
+    (para "Whitespace inside strings in " (item tag_name "item") " tags
+    is not preserved, unless the tag is a descendent of a whitespace preserving
+    tag.")))

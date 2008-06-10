@@ -1,0 +1,22 @@
+(section
+  (title "date")
+  (ref "element_date")
+
+  (para-verbatim tag_synopsis
+"(date)")
+
+  (para "The " (item tag_name "date") " tag inserts the current time and
+  date in ISO format (see " (link "example_date" "example") ") into
+  the rendered output. The time and date refer to the approximate
+  (within a couple of seconds, typically) time that rendering started.
+  The time is adjusted to match the current system timezone.")
+
+  (section
+    (title "specification")
+    (para "The " (item tag_name "date") " tag takes no parameters.")
+    (para "The " (item tag_name "date") " tag may be placed anywhere."))
+
+  (section
+    (title "example output")
+    (ref "example_date")
+    (para-verbatim example "2008-05-10 21:28:48 +0060")))

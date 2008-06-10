@@ -1,0 +1,19 @@
+(section
+  (title "contents")
+  (ref "element_contents")
+
+  (para-verbatim tag_synopsis
+"(contents)")
+
+  (para "The " (item tag_name "contents") " tag generates a table of
+  contents wherever it is placed. The table will list all sections of a
+  depth greater than that of the section containing the tag. A " (item
+  tag_name "contents") " tag placed at the root of a document will
+  therefore generate a table of contents for the entire document. If
+  a section defines a " (link "element_title" "title") ", the title
+  will be printed in the table of contents.")
+
+  (section
+    (title "specification")
+    (para "The " (item tag_name "contents") " tag takes no parameters.")
+    (para "The " (item tag_name "contents") " tag may be placed anywhere.")))

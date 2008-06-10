@@ -1,0 +1,16 @@
+(section
+  (title "encoding")
+  (ref "encoding")
+
+  (para-verbatim tag_synopsis
+"(encoding \"encoding\")")
+
+  (para "The " (item tag_name "encoding") " tag specifies that the document
+  is in the named text encoding. The current default and only supported value
+  is \"utf8\".")
+
+  (section
+    (title "specification")
+    (para "The " (item tag_name "encoding") " tag takes a single string parameter.")
+    (para "The " (item tag_name "encoding") " tag may be placed anywhere
+    but may only appear once per document.")))

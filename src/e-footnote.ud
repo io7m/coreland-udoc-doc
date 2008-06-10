@@ -1,0 +1,20 @@
+(section
+  (title "footnote")
+  (ref "element_footnote")
+
+  (para-verbatim tag_synopsis
+"(footnote (...))")
+
+  (para "The " (item tag_name "footnote") " tag creates a new footnote that
+  will be rendered in the \"footnotes\" section at the end of the current
+  file or section, depending on the specifics of the current output format "
+  (footnote (item "This is an example footnote."))
+  (footnote (item "This is another example footnote "
+    (footnote (item "Footnotes may contain footnotes.")) "."))
+  ".")
+
+  (section
+    (title "specification")
+    (para "The " (item tag_name "footnote") " tag a single list parameter. There
+    are no restrictions on the contents of the list.")
+    (para "The " (item tag_name "footnote") " tag may be placed anywhere.")))

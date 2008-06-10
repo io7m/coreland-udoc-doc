@@ -1,0 +1,26 @@
+(section
+  (title "link")
+  (ref "element_link")
+
+  (para-verbatim tag_synopsis
+"(link \"refname\")
+(link \"refname\" \"replacement text\")")
+
+  (para "The " (item tag_name "link") " tag specifies an internal
+  document link.  The first, required argument to " (item tag_name
+  "link") " is the name of a document reference point specified with the
+  " (link "element_ref" "ref") " tag.")
+
+  (para "The tag will be processed in an output format specific manner "
+  (footnote (item "A " (item tag_name "link") " tag will become a
+  clickable anchor in HTML, for example.")) ".")
+
+  (para "The tag's second, optional parameter is a string of text that
+  will be displayed instead of the reference name, when using an output
+  format that is capable of it (HTML, ConTeXt, etc).")
+
+  (section
+    (title "specification")
+    (para "The " (item tag_name "link") " tag takes a reference name as a
+    string parameter and optionally takes a string of replacement text.")
+    (para "The " (item tag_name "link") " tag may be placed anywhere.")))
