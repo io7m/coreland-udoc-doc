@@ -1,3 +1,17 @@
 (section
   (title "render-header")
-)
+  (ref "element_render_header")
+
+  (para-verbatim tag_synopsis
+"(render-header \"file\")")
+
+  (para "The " (item tag_name "render-header") " tag is equivalent to the "
+  (link "element_render" "render") " tag except that the contents of the file
+  are rendered above all other content on every page.")
+
+  (section
+    (title "specification")
+    (para "The " (item tag_name "render-header") " tag takes a name as a
+    string parameter.")
+    (para "The " (item tag_name "render-header") " tag may be placed anywhere
+    but may only appear once per document.")))

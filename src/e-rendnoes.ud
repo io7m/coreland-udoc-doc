@@ -1,3 +1,20 @@
 (section
   (title "render-noescape")
-)
+  (ref "element_render_noescape")
+
+  (para-verbatim tag_synopsis
+"(render-noescape \"file\")")
+
+  (para "The " (item tag_name "render-noescape") " tag is equivalent to the "
+  (item tag_name "render") " tag except that no characters are escaped. This
+  allows direct insertion of code into the output.")
+
+  (para "As an example of usage, the " (item tag_name "render-noescape")
+  " tag is the standard way to insert diagrams into ConTeXt code, or
+  images into HTML.")
+
+  (section
+    (title "specification")
+    (para "The " (item tag_name "render-noescape") " tag takes a name as a
+    string parameter.")
+    (para "The " (item tag_name "render-noescape") " tag may be placed anywhere.")))

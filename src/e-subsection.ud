@@ -1,0 +1,29 @@
+(section
+  (title "subsection")
+  (ref "element_subsection")
+
+  (para-verbatim tag_synopsis
+"(subsection ...)")
+
+  (para "The " (item tag_name "subsection") " tag specifies a
+  subsection. A subsection is identical to a " (link "element_section"
+  "section") " tag except that a " (item tag_name "subsection") " tag
+  will never cause a file to be split into multiple pages (when using
+  renderers that support it).")
+
+  (para "The title for the current subsection can be set with the "
+  (link "element_title" "title") " tag.")
+
+  (section
+    (title "specification")
+    (para "The " (item tag_name "subsection") " tag takes any number of string, symbol
+      or list parameters.")
+    (para "The " (item tag_name "subsection") " tag may be placed anywhere but it
+    may not be the first tag in a document (unless it appears inside a list)."))
+
+  (section
+    (title "example")
+    (para-verbatim example
+"(subsection
+  (para \"Something.\")
+  (para \"Something \" (item \"else\") \".\"))")))

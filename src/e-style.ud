@@ -1,3 +1,12 @@
 (section
   (title "style")
-)
+  (ref "element_style")
+
+  (para-verbatim tag_synopsis
+"(style \"file\")")
+
+  (section
+    (title "specification")
+    (para "The " (item tag_name "style") " tag takes a name as a
+    string parameter.")
+    (para "The " (item tag_name "style") " tag may be placed anywhere.")))

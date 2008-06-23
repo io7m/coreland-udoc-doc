@@ -10,7 +10,7 @@
   "ref") " names the reference point so that it can be referred to by
   other tags such as " (link "element_link" "link") ".")
 
-  (para "The tag will be processed in an output format specific manner.
+  (para "The tag will be processed in an output format-specific manner.
   In HTML, for example, the tag will emit a named anchor, prefixed with
   \"r_\" in order to allow specific page positions to be linked to.")
 

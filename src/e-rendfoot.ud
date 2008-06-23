@@ -1,3 +1,17 @@
 (section
   (title "render-footer")
-)
+  (ref "element_render_footer")
+
+  (para-verbatim tag_synopsis
+"(render-footer \"file\")")
+
+  (para "The " (item tag_name "render-footer") " tag is equivalent to the "
+  (link "element_render" "render") " tag except that the contents of the file
+  are rendered below all other content on every page.")
+
+  (section
+    (title "specification")
+    (para "The " (item tag_name "render-footer") " tag takes a name as a
+    string parameter.")
+    (para "The " (item tag_name "render-footer") " tag may be placed anywhere
+    but may only appear once per document.")))

@@ -1,3 +1,20 @@
 (section
   (title "render")
-)
+  (ref "element_render")
+
+  (para-verbatim tag_synopsis
+"(render \"file\")")
+
+  (para "The " (item tag_name "render") " tag inserts the contents of a file
+  into the rendered output, after processing them and escaping any characters
+  that might be interpreted as syntactic elements in the output format.")
+
+  (para "The actual file opened is dependent on the current output format. The
+  name of the file to be opened is constructed by appending an output
+  format-specific suffix onto the original name specified.")
+
+  (section
+    (title "specification")
+    (para "The " (item tag_name "render") " tag takes a name as a
+    string parameter.")
+    (para "The " (item tag_name "render") " tag may be placed anywhere.")))

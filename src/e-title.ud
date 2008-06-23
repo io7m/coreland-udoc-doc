@@ -1,3 +1,20 @@
 (section
   (title "title")
-  (ref "element_title"))
+  (ref "element_title")
+
+  (para-verbatim tag_synopsis
+"(title \"text\")")
+
+  (para "The " (item tag_name "title") " tag sets the title for the current
+  section. If placed outside of any section, the tag sets the title for the
+  document.")
+
+  (para "Depending on the output format, the title is usually displayed at the
+  top of the page. The title will also appear in any table of contents that
+  references the section.")
+
+  (section
+    (title "specification")
+    (para "The " (item tag_name "title") " tag takes a single string parameter.")
+    (para "The " (item tag_name "title") " tag may be placed anywhere but
+    may only be placed once per section.")))

@@ -15,7 +15,8 @@
 
     (para (item package "udoc") " is not intended to replace XML or any
     other generic markup language. It is a documentation language, meant
-    as a common ground for easy conversion to other presentation formats.")
+    as a common ground for easy conversion to different presentation
+    formats.")
 
   ; simplicity
 
@@ -33,8 +34,8 @@
     causing repetitive strain injury due to heavy redundancy).")
 
     (para "The simplicity of the source format guarantees easy
-    conversion to future markup document formats should the author wish
-    to do so.")
+    conversion to future markup document formats should the author of
+    the document wish to do so.")
 
     (para (item package "udoc") " documents may be written to any level
     of granularity. There are very, very few restrictions on document
@@ -60,8 +61,8 @@
 
     (para (item package "udoc") " documents produce completely
     \"unstyled\" output markup that is intended to be very simple to
-    customise. Output format specific code can be inserted transparently
+    customise. Output format-specific code can be inserted transparently
     to essentially allow any degree of control that would have been
-    possible had the output text been hand-written, manually."))
+    possible had the output text been hand-written."))
 
 ) ; end of section

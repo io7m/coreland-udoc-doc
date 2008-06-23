@@ -1,4 +1,36 @@
 (section
   (title "section")
   (ref "element_section")
-)
+
+  (para-verbatim tag_synopsis
+"(section ...)")
+
+  (para "The " (item tag_name "section") " tag specifies a section. A
+  section is the most significant structural element provided. It is
+  suitable for separating a text into chapters or for more general
+  partitioning.")
+
+  (para "The " (item tag_name "section") " tag may cause a document to
+  be split into separate files upon rendering, depending on the output
+  format. If the output format supports file splitting, the level at
+  which splitting may occur is controlled via a threshold value. Any "
+  (item tag_name "section") " tags occuring at a depth less than the
+  threshold value will cause a new file to be created. Splitting is
+  disabled by setting the threshold value to " (item constant "0") ".")
+
+  (para "The title for the current section can be set with the "
+  (link "element_title" "title") " tag.")
+
+  (section
+    (title "specification")
+    (para "The " (item tag_name "section") " tag takes any number of string, symbol
+      or list parameters.")
+    (para "The " (item tag_name "section") " tag may be placed anywhere but it
+    may not be the first tag in a document (unless it appears inside a list)."))
+
+  (section
+    (title "example")
+    (para-verbatim example
+"(section
+  (para \"Something.\")
+  (para \"Something \" (item \"else\") \".\"))")))

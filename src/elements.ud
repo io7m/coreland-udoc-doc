@@ -18,6 +18,7 @@
   (include "e-rendnoes.ud")
   (include "e-section.ud")
   (include "e-style.ud")
+  (include "e-subsection.ud")
+  (include "e-t-row.ud")
   (include "e-table.ud")
-  (include "e-tablerow.ud")
   (include "e-title.ud"))
