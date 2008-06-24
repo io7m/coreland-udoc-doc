@@ -11,7 +11,7 @@
   "link") " is the name of a document reference point specified with the
   " (link "element_ref" "ref") " tag.")
 
-  (para "The tag will be processed in an output format-specific manner "
+  (para "The tag will be processed in an output format specific manner "
   (footnote (item "A " (item tag_name "link") " tag will become a
   clickable anchor in HTML, for example.")) ".")
 

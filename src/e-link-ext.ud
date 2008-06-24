@@ -7,7 +7,7 @@
 (link-ext \"url://domain.tld/\" \"replacement text\")")
 
   (para "The " (item tag_name "link_ext") " tag specifies an external URL link.
-  The URL will be processed in an output format-specific manner "
+  The URL will be processed in an output format specific manner "
   (footnote (item "A " (item tag_name "link-ext") " tag will become a clickable
   anchor in HTML, for example.")) ".")
 

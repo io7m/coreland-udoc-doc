@@ -11,7 +11,7 @@
 
   (para "The actual file opened is dependent on the current output format. The
   name of the file to be opened is constructed by appending an output
-  format-specific suffix onto the original name specified.")
+  format specific suffix onto the original name specified.")
 
   (section
     (title "specification")
