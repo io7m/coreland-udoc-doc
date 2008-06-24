@@ -24,3 +24,4 @@ release/udoc.ps: build/udoc.ps
 
 clean:
 	rm -f build/*
+	rm -f release/*
