@@ -30,6 +30,7 @@ hr {
 .ud_footnotes { border-top: 1px solid #ddd; padding-top: 1em; }
 .ud_footnote_tab { }
 
+.command,
 .filename,
 .func,
 .func_param,
@@ -39,6 +40,16 @@ hr {
 .tag_name
 {
   font-family: monospace;
+}
+
+table.options { }
+table.options td { vertical-align: top; padding: 0.5em; }
+
+table.package_deps { }
+table.package_deps td {
+  vertical-align: top;
+  padding: 0.3em;
+  padding-right: 3em;
 }
 
 .example {

@@ -6,7 +6,7 @@
   (section
     (title "usage")
     (para
-      "On installation, all source files from the library are
+      "On installation, all source files from the package are
       copied into a repository, by default this directory is "
       (item filename "/usr/local/share/coreland/udoc-repos")
       ". Static libraries are copied into "
@@ -21,13 +21,13 @@
   (section
     (title "requirements")
 
-    (para
-      "The library requires a C90 compiler and a POSIX environment to
-      compile. The library is expected to be usable in a non-POSIX
+    (para "The package requires a C90" (footnote (link-ext
+    "http://www.open-std.org/jtc1/sc22/wg14/")) " compiler and a POSIX"
+    (footnote (link-ext "http://www.opengroup.org/")) " environment to
+      compile. The package is expected to be usable in a non-POSIX
       environment, but is not currently tested extensively in one.")
 
-    (para
-      "The library requires the following packages to be installed
+    (para "The package requires the following packages to be installed
       prior to compilation:")
 
     (para
@@ -46,25 +46,23 @@
 
   (section
     (title "compilation")
-    (para
-      "The library is compiled with the following commands: ")
+    (para "The package is compiled with the following commands: ")
 
-    (para-verbatim
+    (para-verbatim example
 "make
 make-tests")
 
-    (para
-      "The first make command compiles the object code itself. The second
-      command runs the test suite - any errors here signal incorrect library
-      behaviour.")
+    (para "The first " (item command "make") " command compiles the
+    object code itself. The second command runs the test suite - any
+    errors here signal incorrect package behaviour.")
 
-    (para
-      "To install:")
+    (para "To install:")
 
-    (para-verbatim
+    (para-verbatim example
 "make install
 make install-check")
 
-    (para
-      "The first make command installs all relevant files. The second
-      command checks that all files were installed correctly.")))
+    (para "The first " (item command "make") " command installs all
+    relevant files. The second command checks that all files were
+    installed correctly."))
+)

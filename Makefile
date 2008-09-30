@@ -25,11 +25,11 @@ build/udoc.ps: build/udoc.pdf
 release/udoc.ps: build/udoc.ps
 	cp build/udoc.ps release/udoc.ps
 
-release/udoc.html: build/0.html image-data
+release/udoc.html: build/0.html image-data css
 	(cd src && udoc-render -s 0 -r xhtml main.ud ../build)
 	cp build/0.html release/udoc.html
 
-release/0.html: src/main.ud image-data
+release/0.html: src/main.ud image-data css
 	(cd src && udoc-render -s 2 -r xhtml main.ud ../build)
 	cp build/*.html release
 

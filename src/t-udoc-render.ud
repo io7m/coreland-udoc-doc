@@ -1,2 +1,58 @@
 (section
-  (title "udoc-render"))
+  (ref "udoc_render")
+  (title "udoc-render")
+
+  (section
+    (title "synopsis")
+    (para-verbatim
+"udoc-render [-hnV] [-L lev] [-s threshold] [-r renderer] file outdir"))
+
+  (section
+    (title "description")
+    (para "The " (item command "udoc-render") " command renders a given
+    document. The document " (item filename "file") " is processed and
+    output files are written to the directory " (item filename "outdir")
+    ". The document is validated before rendering."))
+
+  (section
+    (title "options")
+    (para "The following options are available:")
+    (para
+      (table options
+        (t-row
+          (item "-s threshold")
+          (item "Sets numeric threshold value for file splitting. See the "
+            (link "element_section" "section") " element reference."))
+        (t-row
+          (item "-r renderer")
+          (item "Select renderer."))
+        (t-row
+          (item "-L level")
+          (item "Set log verbosity."))
+        (t-row
+          (item "-n")
+          (item "Do not render."))
+        (t-row
+          (item "-V")
+          (item "Print version string."))
+        (t-row
+          (item "-h")
+          (item "Print help message.")))))
+
+  (section
+    (title "example")
+    (para-verbatim example
+"$ udoc-render -s 2 -r xhtml main.ud
+udoc-render: notice: create 0.html
+udoc-render: notice: create 1.html
+udoc-render: notice: create 2.html
+udoc-render: notice: create 7.html
+udoc-render: notice: create 11.html
+udoc-render: notice: create 14.html
+udoc-render: notice: create 15.html
+udoc-render: notice: create 16.html
+udoc-render: notice: create 17.html
+...
+"))
+
+)
