@@ -1,3 +1,27 @@
 (section
   (title "list")
-)
+  (ref "element_list")
+
+  (para-verbatim tag_synopsis
+"(list ...)")
+
+  (para "The " (item tag_name "list") " tag specifies an unordered list.")
+
+  (section
+    (title "specification")
+    (para "The " (item tag_name "list") " tag takes any number of string, symbol
+      or list parameters.")
+    (para "The " (item tag_name "list") " tag may be placed anywhere.")
+    (para "Whitespace inside strings in " (item tag_name "list") " tags
+    is not preserved, unless the tag is a descendent of a whitespace preserving
+    tag."))
+
+  (section
+    (title "example")
+    (para
+      (list
+        (item "item1")
+        (item "item2")
+        (item "item3")))))
+
+

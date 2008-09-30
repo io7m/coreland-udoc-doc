@@ -7,7 +7,7 @@
 
   (para "The " (item tag_name "encoding") " tag specifies that the document
   is in the named text encoding. The current default and only supported value
-  is \"utf8\".")
+  is \"utf-8\".")
 
   (section
     (title "specification")

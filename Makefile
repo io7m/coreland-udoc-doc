@@ -1,11 +1,14 @@
-all: pdf ps dvi
+all: pdf ps dvi html-split html-single css
 
 pdf: release/udoc.pdf
 ps: release/udoc.ps
 dvi: release/udoc.dvi
+html-split: release/0.html
+html-single: release/udoc.html
+css: release/main.css
 
 build/0.tex: src/main.ud
-	(cd src && udoc -s 1 -r context main.ud ../build)
+	(cd src && udoc-render -s 1 -r context main.ud ../build)
 
 build/udoc.dvi: build/0.tex
 	(cd build && texexec --batch 0.tex && mv 0.dvi udoc.dvi)
@@ -22,6 +25,20 @@ build/udoc.ps: build/udoc.pdf
 release/udoc.ps: build/udoc.ps
 	cp build/udoc.ps release/udoc.ps
 
+release/udoc.html: build/0.html
+	(cd src && udoc-render -s 0 -r xhtml main.ud ../build)
+	cp build/0.html release/udoc.html
+
+release/0.html: src/main.ud
+	(cd src && udoc-render -s 2 -r xhtml main.ud ../build)
+	cp build/*.html release
+
+release/main.css: src/main.css
+	cp src/main.css build
+	cp build/main.css release
+
 clean:
 	rm -f build/*
 	rm -f release/*
+
+clean-all: clean

@@ -1,12 +1,12 @@
 (section
-  (title "link_ext")
+  (title "link-ext")
   (ref "element_link_ext")
 
   (para-verbatim tag_synopsis
 "(link-ext \"url://domain.tld/\")
 (link-ext \"url://domain.tld/\" \"replacement text\")")
 
-  (para "The " (item tag_name "link_ext") " tag specifies an external URL link.
+  (para "The " (item tag_name "link-ext") " tag specifies an external URL link.
   The URL will be processed in an output format specific manner "
   (footnote (item "A " (item tag_name "link-ext") " tag will become a clickable
   anchor in HTML, for example.")) ".")

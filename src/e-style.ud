@@ -5,6 +5,11 @@
   (para-verbatim tag_synopsis
 "(style \"file\")")
 
+  (para "The " (item tag_name "style") " tag sets the name of the
+  \"style\" for the document. The concept of a style is entirely
+  output format-specific. In XHTML, for example, the name of a style
+  corresponds to the name of an imported CSS file.")
+
   (section
     (title "specification")
     (para "The " (item tag_name "style") " tag takes a name as a

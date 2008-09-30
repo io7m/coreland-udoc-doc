@@ -3,13 +3,13 @@
 (render-header "header")
 (render-footer "footer")
 
-(title "udoc-doc 0.11 documentation")
+(title "udoc 0.12 documentation")
 
 (para (include "m_docid.ud"))
 (para (include "m_pubdate.ud"))
 
 (para abstract
-  "documentation for " (item package "udoc 0.11"))
+  "documentation for " (item package "udoc 0.12"))
 
 (contents)
 
