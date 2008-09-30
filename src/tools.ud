@@ -1,4 +1,8 @@
 (section
   (title "tool reference")
   (contents)
-  (include "t-udoc.ud"))
+  (include "t-udoc-conf.ud")
+  (include "t-udoc-files.ud")
+  (include "t-udoc-render.ud")
+  (include "t-udoc-valid.ud")
+)

@@ -17,4 +17,9 @@
     (title "specification")
     (para "The " (item tag_name "render-noescape") " tag takes a name as a
     string parameter.")
-    (para "The " (item tag_name "render-noescape") " tag may be placed anywhere.")))
+    (para "The " (item tag_name "render-noescape") " tag may be placed anywhere."))
+
+  (section
+    (title "example")
+    (para
+      (render-noescape "img_corn"))))

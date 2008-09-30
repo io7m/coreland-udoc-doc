@@ -5,7 +5,8 @@
   (para-verbatim tag_synopsis
 "(list ...)")
 
-  (para "The " (item tag_name "list") " tag specifies an unordered list.")
+  (para "The " (item tag_name "list") " tag specifies an unordered list of
+   elements.")
 
   (section
     (title "specification")
