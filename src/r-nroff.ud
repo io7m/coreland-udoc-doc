@@ -1,0 +1,12 @@
+(section
+  (ref "renderer_nroff")
+  (title "nroff")
+  (para
+    "The " (item renderer "nroff") " renderer outputs nroff text. The advantage
+    of using this renderer over the "
+    (item renderer (link "renderer_plain" "plain")) " renderer is that nroff
+    provides better formatting (justification, hyphenation) of text than the "
+    (item renderer (link "renderer_plain" "plain")) " renderer could ever be
+    capable of. The disadvantage is that nroff can be difficult to write by
+    hand - which may be required for any inserted hand-written sections.")
+)

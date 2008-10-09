@@ -1,0 +1,89 @@
+(section
+  (ref "renderer_xhtml")
+  (title "XHTML")
+  (para
+    "The " (item renderer "XHTML") " renderer outputs XHTML. It can output
+    a single XHTML file or multiple XHTML files. The official specification
+    the XHTML output adheres to is XHTML Basic 1.1 "
+      (footnote (link-ext "http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd"))
+    ". Authors must take care not to include invalid XHTML with the various
+    rendering tags.")
+
+  (para
+    "The renderer escapes the following characters in the input text (including
+     files included in the output by the " (item tag_name (link "element_render"
+     "render")) " tag):")
+
+  (para
+    (table escape_table
+      (t-row
+        (item "original")
+        (item "escaped"))
+      (t-row
+        (item "&")
+        (item "&amp;"))
+      (t-row
+        (item "<")
+        (item "&lt;"))
+      (t-row
+        (item ">")
+        (item "&gt;"))))
+
+  (section
+    (title "tags")
+
+    (section
+      (title "link")
+      (para "The " (item tag_name (link "element_link" "link")) " tag creates
+       a clickable link to the specified "
+      (item tag_name (link "element_ref" "ref")) " element."))
+
+    (section
+      (title "link-ext")
+      (para "The " (item tag_name (link "element_link_ext" "link-ext")) " tag
+       creates a clickable link to the specified URL."))
+
+    (section
+      (title "ref")
+      (para "The " (item tag_name (link "element_ref" "ref")) " tag specifies
+      a named anchor that can be linked to by using the hash symbol in the URL
+      of the file:")
+      (para-verbatim example
+"(ref \"example\")
+
+<a href=\"0.html#r_example\">go to example</a>
+"))
+
+    (section
+      (title "render")
+      (para "The " (item tag_name (link "element_render" "render")) " tag specifies
+       the name of a file (sans file extension) to be inserted immediately into
+       the output text. The file extension is assumed to be \""
+       (item filename ".html") "\"."))
+
+    (section
+      (title "render-header")
+      (para "The " (item tag_name (link "element_render_header" "render-header"))
+       " tag specifies the name of a file (sans file extension) to be inserted
+       at the top of every page in the output text. The file extension is
+       assumed to be \"" (item filename ".html") "\"."))
+
+    (section
+      (title "render-footer")
+      (para "The " (item tag_name (link "element_render_footer" "render-footer"))
+       " tag specifies the name of a file (sans file extension) to be inserted
+       at the bottom of every page in the output text. The file extension is
+       assumed to be \"" (item filename ".html") "\"."))
+
+    (section
+      (title "style")
+      (para "The " (item tag_name (link "element_style" "style")) " tag specifies
+       the name of an external CSS "
+        (footnote (link-ext "http://www.w3.org/Style/CSS")) " file. The file
+       will attached using the XHTML <link> tag: ")
+  
+      (para-verbatim example
+"(style \"main\")
+  
+<link rel=\"stylesheet\" type=\"text/css\" href=\"main.css\"/>
+"))))

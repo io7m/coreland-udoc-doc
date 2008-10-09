@@ -1,0 +1,12 @@
+(section
+  (title "renderers")
+  (contents)
+
+  (para "This section attempts to document the characteristics of the various
+    renderers and what (if any) renderer-specific meaning or behaviour certain
+    tags may have.")
+
+  (include "r-plain.ud")
+  (include "r-nroff.ud")
+  (include "r-context.ud")
+  (include "r-xhtml.ud"))

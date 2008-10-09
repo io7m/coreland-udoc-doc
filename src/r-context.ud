@@ -1,0 +1,62 @@
+(section
+  (ref "renderer_context")
+  (title "ConTeXt")
+  (para
+    "The " (item renderer "ConTeXt") " renderer outputs ConTeXt code which
+     can then be processed into DVI file "
+      (footnote (link-ext "http://www.math.umd.edu/~asnowden/comp-cont/dvi.html"))
+     " and then into a variety of formats such as Postscript, PDF, SVG, HTML.")
+
+  (section
+    (title "tags")
+
+    (section
+      (title "link")
+      (para "When the ConTeXt output is processed into PDF using most DVI to PDF
+       processors, the " (item tag_name (link "element_link" "link")) " tag creates
+       a clickable link to the specified "
+      (item tag_name (link "element_ref" "ref")) " element."))
+
+    (section
+      (title "link-ext")
+      (para "When the ConTeXt output is processed into PDF using most DVI to PDF 
+       processors the " (item tag_name (link "element_link_ext" "link-ext")) " tag
+       creates a clickable link to the specified URL."))
+
+    (section
+      (title "render")
+      (para "The " (item tag_name (link "element_render" "render")) " tag specifies
+       the name of a file (sans file extension) to be inserted immediately into
+       the output text. The file extension is assumed to be \""
+       (item filename ".tex") "\"."))
+
+    (section
+      (title "render-header")
+      (para "The " (item tag_name (link "element_render_header" "render-header"))
+       " tag specifies the name of a file (sans file extension) to be inserted
+       at the top of the output text. The file extension is
+       assumed to be \"" (item filename ".tex") "\"."))
+
+    (section
+      (title "render-footer")
+      (para "The " (item tag_name (link "element_render_footer" "render-footer"))
+       " tag specifies the name of a file (sans file extension) to be inserted
+       at the bottom of the output text. The file extension is
+       assumed to be \"" (item filename ".tex") "\"."))
+
+    (section
+      (title "style")
+      (para "The " (item tag_name (link "element_style" "style")) " tag specifies
+       the name of an external ConTeXt file (sans file extension) to be
+       inserted at the very beginning of the output text, before any other
+       document content. The file extension is assumed to be \""
+      (item filename ".tex") "\".")
+ 
+      (para-verbatim example
+"(style \"main\")
+  
+%
+% contents of main.tex
+%
+\\setupheadertexts[udoc documentation][chapter]
+"))))

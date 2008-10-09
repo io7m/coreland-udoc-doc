@@ -1,0 +1,87 @@
+(section
+  (ref "renderer_plain")
+  (title "plain")
+  (para
+    "The " (item renderer "plain") " renderer outputs plain text. Currently,
+    the renderer uses a maximum page width of 80 characters. This value is
+    likely to become configurable in future versions.")
+
+    (section
+      (title "tags")
+
+      (section
+        (title "link")
+        (para "The " (item tag_name (link "element_link" "link")) " tag causes
+        the text of the second argument to be printed in the output text followed
+        by the name of the reference point in parentheses. If only one argument
+        is provided, it is printed without parentheses. The resulting text
+        is surrounded by square brackets, in either case.")
+        (para-verbatim example
+"(link \"example\")
+
+[example]
+
+(link \"example\" \"replacement text\")
+
+[replacement text (example)]"))
+
+      (section
+        (title "link-ext")
+        (para "The " (item tag_name (link "element_link_ext" "link-ext")) " tag
+        causes the text of the second argument to be printed in the output text
+        followed by the URL in the first argument in parentheses. If only one
+        argument is provided, it is printed as-is.")
+        (para-verbatim example
+"(link-ext \"http://example.org\")
+
+http://example.org
+
+(link-ext \"http://example.org\" \"the example site\")
+
+the example site (http://example.org)"))
+
+      (section
+        (title "ref")
+        (para "The " (item tag_name (link "element_ref" "ref")) " tag creates
+        a visible reference point in the output text:")
+        (para-verbatim example
+"(ref \"example\")
+
+[ref: example]
+"))
+
+      (section
+        (title "render")
+        (para "The " (item tag_name (link "element_render" "render")) " tag specifies
+        the name of a file (sans file extension) to be inserted immediately into
+        the output text. The file extension is assumed to be \""
+        (item filename ".txt") "\"."))
+
+      (section
+        (title "render-header")
+        (para "The " (item tag_name (link "element_render_header" "render-header"))
+        " tag specifies the name of a file (sans file extension) to be inserted
+        at the top of the output text. The file extension is
+        assumed to be \"" (item filename ".txt") "\"."))
+
+      (section
+        (title "render-footer")
+        (para "The " (item tag_name (link "element_render_footer" "render-footer"))
+        " tag specifies the name of a file (sans file extension) to be inserted
+        at the bottom of the output text. The file extension is
+        assumed to be \"" (item filename ".txt") "\"."))
+
+      (section
+        (title "style")
+        (para "The " (item tag_name (link "element_style" "style")) " tag does nothing."))
+
+      (section
+        (title "table")
+        (para
+          "The " (item renderer "plain") " renderer attempts to render tables
+          by dividing available page space by the number of table columns and
+          hard-wrapping the cell contents to fit. If this is not acceptable,
+          the alternative is to use the " (link "element_render" "render")
+          " tag to manually include a hand-written table."))
+    )
+)

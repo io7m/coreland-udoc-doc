@@ -1,0 +1,17 @@
+(section
+  (title "include")
+  (ref "element_include")
+
+  (para-verbatim tag_synopsis
+"(include \"filename\")")
+
+  (para
+    "The " (item tag_name "include") " tag directly includes a specified
+     document wherever the tag is placed. Recursive file inclusion is not
+     permitted. The path specified is relative to the original working
+     directory of the process performing the rendering.")
+
+  (section
+    (title "specification")
+    (para "The " (item tag_name "include") " tag takes one string parameter.")
+    (para "The " (item tag_name "include") " tag may be placed anywhere.")))

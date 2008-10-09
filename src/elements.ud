@@ -5,6 +5,7 @@
   (include "e-date.ud")
   (include "e-encoding.ud")
   (include "e-footnote.ud")
+  (include "e-include.ud")
   (include "e-item.ud")
   (include "e-link-ext.ud")
   (include "e-link.ud")

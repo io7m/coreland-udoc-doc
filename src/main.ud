@@ -14,5 +14,6 @@
 (contents)
 
 (include "pkg.ud")
+(include "renderers.ud")
 (include "elements.ud")
 (include "tools.ud")

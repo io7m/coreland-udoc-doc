@@ -6,15 +6,36 @@
   (section
     (title "usage")
     (para
-      "On installation, all source files from the package are
-      copied into a repository, by default this directory is "
-      (item filename "/usr/local/share/coreland/udoc-repos")
-      ". Static libraries are copied into "
-      (item filename "/usr/local/lib/coreland/udoc-static")
-      ", header files are copied into "
-      (item filename "/usr/local/include/coreland/udoc")
-      " and executables are copied into "
-      (item filename "/usr/local/bin") "."))
+      "On installation, binaries, source files, libraries and
+       headers are installed into various locations. The locations
+       can be customised by editing single-line configuration files.
+       The defaults are as follows:")
+    (para
+      (table install_config
+        (t-row
+          (item "default path")
+          (item "configuration file")
+          (item "description"))
+        (t-row
+          (item filename "/usr/local/share/coreland/udoc-repos")
+          (item filename "conf-repos")
+          (item "Source code repository."))
+        (t-row
+          (item filename "/usr/local/lib/coreland/udoc-static")
+          (item filename "conf-slibdir")
+          (item "Static library directory."))
+        (t-row
+          (item filename "/usr/local/lib/coreland/udoc")
+          (item filename "conf-dlibdir")
+          (item "Dynamic library directory."))
+        (t-row
+          (item filename "/usr/local/include/coreland/udoc")
+          (item filename "conf-incdir")
+          (item "Header file directory."))
+        (t-row
+          (item filename "/usr/local/bin")
+          (item filename "conf-bindir")
+          (item "Executable directory.")))))
 
   ; compilation requirements
 

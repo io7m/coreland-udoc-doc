@@ -3,7 +3,7 @@
   (ref "element_style")
 
   (para-verbatim tag_synopsis
-"(style \"file\")")
+"(style \"name\")")
 
   (para "The " (item tag_name "style") " tag sets the name of the
   \"style\" for the document. The concept of a style is entirely

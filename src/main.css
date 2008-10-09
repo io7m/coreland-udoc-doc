@@ -45,10 +45,21 @@ hr {
 table.options { }
 table.options td { vertical-align: top; padding: 0.5em; }
 
+table.install_config { }
+table.install_config td {
+  vertical-align: top;
+  padding-right: 3em;
+}
+
+table.escape_table { }
+table.escape_table td {
+  vertical-align: top;
+  padding-right: 3em;
+}
+
 table.package_deps { }
 table.package_deps td {
   vertical-align: top;
-  padding: 0.3em;
   padding-right: 3em;
 }
 
