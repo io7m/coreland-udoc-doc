@@ -1,6 +1,6 @@
 (section
   (title "link")
-  (ref "element_link")
+  (ref "tag_link")
 
   (para-verbatim tag_synopsis
 "(link \"refname\")
@@ -9,7 +9,7 @@
   (para "The " (item tag_name "link") " tag specifies an internal
   document link.  The first, required argument to " (item tag_name
   "link") " is the name of a document reference point specified with the
-  " (link "element_ref" "ref") " tag.")
+  " (link "tag_ref" "ref") " tag.")
 
   (para "The tag will be processed in an output format specific manner "
   (footnote (item "A " (item tag_name "link") " tag will become a

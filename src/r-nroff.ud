@@ -6,7 +6,86 @@
     of using this renderer over the "
     (item renderer (link "renderer_plain" "plain")) " renderer is that nroff
     provides better formatting (justification, hyphenation) of text than the "
-    (item renderer (link "renderer_plain" "plain")) " renderer could ever be
+    (item renderer (link "renderer_plain" "plain")) " renderer is
     capable of. The disadvantage is that nroff can be difficult to write by
     hand - which may be required for any inserted hand-written sections.")
+
+  (section
+    (title "tags")
+
+    (section
+      (title "link")
+      (para "The " (item tag_name (link "tag_link" "link")) " tag causes
+      the text of the second argument to be printed in the output text followed
+      by the name of the reference point in parentheses. If only one argument
+      is provided, it is printed without parentheses. The resulting text
+      is surrounded by square brackets, in either case.")
+      (para-verbatim example
+"(link \"example\")
+
+[example]
+
+(link \"example\" \"replacement text\")
+
+[replacement text (example)]"))
+
+    (section
+      (title "link-ext")
+      (para "The " (item tag_name (link "tag_link_ext" "link-ext")) " tag
+      causes the text of the second argument to be printed in the output text
+      followed by the URL in the first argument in parentheses. If only one
+      argument is provided, it is printed as-is.")
+      (para-verbatim example
+"(link-ext \"http://example.org\")
+
+http://example.org
+
+(link-ext \"http://example.org\" \"the example site\")
+
+the example site (http://example.org)"))
+
+    (section
+      (title "ref")
+      (para "The " (item tag_name (link "tag_ref" "ref")) " tag creates
+      a visible reference point in the output text:")
+      (para-verbatim example
+"(ref \"example\")
+
+[ref: example]
+"))
+
+    (section
+      (title "render")
+      (para "The " (item tag_name (link "tag_render" "render")) " tag specifies
+      the name of a file (sans file extension) to be inserted immediately into
+      the output text. The file extension is assumed to be \""
+      (item filename ".txt") "\"."))
+
+    (section
+      (title "render-header")
+      (para "The " (item tag_name (link "tag_render_header" "render-header"))
+      " tag specifies the name of a file (sans file extension) to be inserted
+      at the top of the output text. The file extension is
+      assumed to be \"" (item filename ".txt") "\"."))
+
+    (section
+      (title "render-footer")
+      (para "The " (item tag_name (link "tag_render_footer" "render-footer"))
+      " tag specifies the name of a file (sans file extension) to be inserted
+      at the bottom of the output text. The file extension is
+      assumed to be \"" (item filename ".txt") "\"."))
+
+    (section
+      (title "style")
+      (para "The " (item tag_name (link "tag_style" "style")) " tag does nothing."))
+
+    (section
+      (title "table")
+      (para
+        "The " (item renderer "nroff") " renderer attempts to render tables
+        by dividing available page space by the number of table columns and
+        hard-wrapping the cell contents to fit. If this is not acceptable,
+        the alternative is to use the " (link "tag_render" "render")
+        " tag to manually include a hand-written table."))
+    )
 )

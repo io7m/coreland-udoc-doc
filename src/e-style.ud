@@ -1,6 +1,6 @@
 (section
   (title "style")
-  (ref "element_style")
+  (ref "tag_style")
 
   (para-verbatim tag_synopsis
 "(style \"name\")")

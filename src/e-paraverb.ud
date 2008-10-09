@@ -1,12 +1,12 @@
 (section
   (title "para-verbatim")
-  (ref "element_para_verbatim")
+  (ref "tag_para_verbatim")
 
   (para-verbatim tag_synopsis
 "(para-verbatim ...)")
 
   (para "The " (item tag_name "para-verbatim") " tag is equivalent to the "
-  (link "element_para" "para") " tag except that whitespace and line terminators
+  (link "tag_para" "para") " tag except that whitespace and line terminators
   inside strings and the strings of descendent tags are preserved.")
 
   (section

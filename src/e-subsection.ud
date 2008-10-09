@@ -1,18 +1,18 @@
 (section
   (title "subsection")
-  (ref "element_subsection")
+  (ref "tag_subsection")
 
   (para-verbatim tag_synopsis
 "(subsection ...)")
 
   (para "The " (item tag_name "subsection") " tag specifies a
-  subsection. A subsection is identical to a " (link "element_section"
+  subsection. A subsection is identical to a " (link "tag_section"
   "section") " tag except that a " (item tag_name "subsection") " tag
   will never cause a file to be split into multiple pages (when using
   renderers that support it).")
 
   (para "The title for the current subsection can be set with the "
-  (link "element_title" "title") " tag.")
+  (link "tag_title" "title") " tag.")
 
   (section
     (title "specification")

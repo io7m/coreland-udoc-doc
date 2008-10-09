@@ -1,6 +1,6 @@
 (section
   (title "include")
-  (ref "element_include")
+  (ref "tag_include")
 
   (para-verbatim tag_synopsis
 "(include \"filename\")")

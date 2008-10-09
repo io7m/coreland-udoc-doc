@@ -1,6 +1,6 @@
 (section
   (title "section")
-  (ref "element_section")
+  (ref "tag_section")
 
   (para-verbatim tag_synopsis
 "(section ...)")
@@ -19,7 +19,7 @@
   disabled by setting the threshold value to " (item constant "0") ".")
 
   (para "The title for the current section can be set with the "
-  (link "element_title" "title") " tag.")
+  (link "tag_title" "title") " tag.")
 
   (section
     (title "specification")

@@ -24,7 +24,7 @@
     (title "simplicity")
 
     (para (item package "udoc") " defines an extremely minimal set of
-    elements (20 at the time of writing) meaning document source is easy
+    tags (20 at the time of writing) meaning document source is easy
     to understand and the learning curve is shallow.")
 
     (para "The source format is a subset of " (link-ext

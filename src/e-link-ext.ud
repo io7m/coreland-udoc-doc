@@ -1,6 +1,6 @@
 (section
   (title "link-ext")
-  (ref "element_link_ext")
+  (ref "tag_link_ext")
 
   (para-verbatim tag_synopsis
 "(link-ext \"url://domain.tld/\")

@@ -1,6 +1,6 @@
 (section
   (title "list")
-  (ref "element_list")
+  (ref "tag_list")
 
   (para-verbatim tag_synopsis
 "(list ...)")

@@ -22,7 +22,7 @@
         (t-row
           (item "-s threshold")
           (item "Sets numeric threshold value for file splitting. See the "
-            (link "element_section" "section") " element reference."))
+            (link "tag_section" "section") " tag reference."))
         (t-row
           (item "-r renderer")
           (item "Select renderer."))

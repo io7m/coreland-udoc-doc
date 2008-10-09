@@ -1,6 +1,6 @@
 (section
   (title "title")
-  (ref "element_title")
+  (ref "tag_title")
 
   (para-verbatim tag_synopsis
 "(title \"text\")")

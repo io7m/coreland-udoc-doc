@@ -1,5 +1,5 @@
 (section
-  (title "element reference")
+  (title "tag reference")
   (contents)
   (include "e-contents.ud")
   (include "e-date.ud")

@@ -1,13 +1,13 @@
 (section
   (title "para")
-  (ref "element_para")
+  (ref "tag_para")
 
   (para-verbatim tag_synopsis
 "(para ...)")
 
   (para "The " (item tag_name "para") " tag specifies a paragraph. A
   paragraph is a less significant structural element than a "
-  (link "element_section" "section") ".")
+  (link "tag_section" "section") ".")
 
   (section
     (title "specification")

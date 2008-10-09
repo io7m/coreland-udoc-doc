@@ -1,12 +1,12 @@
 (section
   (title "item")
-  (ref "element_item")
+  (ref "tag_item")
 
   (para-verbatim tag_synopsis
 "(item ...)")
 
   (para "The " (item tag_name "item") " tag specifies an 'item'. An item
-  is a less significant structural element than a " (link "element_para"
+  is a less significant structural element than a " (link "tag_para"
   "paragraph") " and is intended to be used to denote names, constants,
   etc.")
 

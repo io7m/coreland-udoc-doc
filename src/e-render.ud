@@ -1,6 +1,6 @@
 (section
   (title "render")
-  (ref "element_render")
+  (ref "tag_render")
 
   (para-verbatim tag_synopsis
 "(render \"file\")")

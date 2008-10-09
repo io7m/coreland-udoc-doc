@@ -1,6 +1,6 @@
 (section
   (title "date")
-  (ref "element_date")
+  (ref "tag_date")
 
   (para-verbatim tag_synopsis
 "(date)")

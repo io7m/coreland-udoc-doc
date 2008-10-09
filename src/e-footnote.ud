@@ -1,6 +1,6 @@
 (section
   (title "footnote")
-  (ref "element_footnote")
+  (ref "tag_footnote")
 
   (para-verbatim tag_synopsis
 "(footnote (...))")

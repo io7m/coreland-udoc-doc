@@ -1,5 +1,5 @@
 (section
-  (title "renderers")
+  (title "renderer reference")
   (contents)
 
   (para "This section attempts to document the characteristics of the various

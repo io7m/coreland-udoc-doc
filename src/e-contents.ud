@@ -1,6 +1,6 @@
 (section
   (title "contents")
-  (ref "element_contents")
+  (ref "tag_contents")
 
   (para-verbatim tag_synopsis
 "(contents)")
@@ -10,7 +10,7 @@
   depth greater than that of the section containing the tag. A " (item
   tag_name "contents") " tag placed at the root of a document will
   therefore generate a table of contents for the entire document. If
-  a section defines a " (link "element_title" "title") ", the title
+  a section defines a " (link "tag_title" "title") ", the title
   will be printed in the table of contents.")
 
   (section
