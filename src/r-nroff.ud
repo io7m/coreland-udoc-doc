@@ -14,6 +14,22 @@
     (title "tags")
 
     (section
+      (title "footnote")
+      (para "The " (item tag_name (link "tag_footnote" "footnote")) "
+       tag creates a visual link to the footnote content which will be
+       rendered at the bottom of the document. The link is a simple number
+       enclosed in square brackets. The footnote numbering system is global
+       to the entire document.")
+      (para-verbatim example
+"(para \"Say hello \" (footnote (item \"Hello!\")) \".\")
+
+Say hello [1].
+
+--
+
+[1] Hello!"))
+
+    (section
       (title "link")
       (para "The " (item tag_name (link "tag_link" "link")) " tag causes
       the text of the second argument to be printed in the output text followed

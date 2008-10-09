@@ -33,6 +33,24 @@
     (title "tags")
 
     (section
+      (title "footnote")
+      (para "The " (item tag_name (link "tag_footnote" "footnote")) "
+       tag creates a clickable link to the footnote content which will be
+       rendered at either the bottom of the current page or at the
+       bottom of the document. The link is a simple number enclosed in
+       square brackets. There is a similar link next to the rendered
+       content that provides a quick return to the original link. The
+       footnote numbering system is global to the entire document.")
+      (para-verbatim example
+"(para \"Say hello \" (footnote (item \"Hello!\")) \".\")
+
+Say hello [1].
+
+--
+
+[1] Hello!"))
+
+    (section
       (title "link")
       (para "The " (item tag_name (link "tag_link" "link")) " tag creates
        a clickable link to the specified "

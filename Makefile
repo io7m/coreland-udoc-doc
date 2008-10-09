@@ -9,10 +9,13 @@ css: release/main.css
 plain: release/0.txt
 nroff: release/0.nrf
 
-build/0.tex: src/main.ud
+src/m_docid.ud: src/m_docid.sh
+	(cd src && ./m_docid.sh > m_docid.ud.tmp && mv m_docid.ud.tmp m_docid.ud)
+
+build/0.tex: src/main.ud src/m_docid.ud
 	(cd src && udoc-render -s 1 -r context main.ud ../build)
 
-build/udoc.dvi: build/0.tex
+build/udoc.dvi: build/0.tex src/m_docid.ud
 	(cd build && texexec --batch 0.tex && mv 0.dvi udoc.dvi)
 release/udoc.dvi: build/udoc.dvi
 	cp build/udoc.dvi release/udoc.dvi
@@ -31,7 +34,7 @@ release/udoc.html: build/0.html image-data css
 	(cd src && udoc-render -s 0 -r xhtml main.ud ../build)
 	cp build/0.html release/udoc.html
 
-release/0.html: src/main.ud image-data css
+release/0.html: src/main.ud src/m_docid.ud image-data css
 	(cd src && udoc-render -s 2 -r xhtml main.ud ../build)
 	cp build/*.html release
 
@@ -39,11 +42,11 @@ release/main.css: src/main.css
 	cp src/main.css build
 	cp build/main.css release
 
-release/0.txt: src/main.ud
+release/0.txt: src/main.ud src/m_docid.ud
 	(cd src && udoc-render -r plain main.ud ../build)
 	cp build/0.txt release/0.txt
 
-release/0.nrf: src/main.ud
+release/0.nrf: src/main.ud src/m_docid.ud
 	(cd src && udoc-render -r nroff main.ud ../build)
 	cp build/0.nrf release/0.nrf
 
@@ -52,6 +55,7 @@ image-data:
 	cp build/*.png release
 
 clean:
+	rm -f src/m_docid.ud
 	rm -f build/*
 	rm -f release/*
 
