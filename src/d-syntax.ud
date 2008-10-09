@@ -1,0 +1,33 @@
+(section
+  (title "syntax")
+
+  (section
+    (title "symbols")
+    (para "Symbols in " (item package "udoc") " are simple tokens using only
+     the ASCII characters:")
+    (para-verbatim
+"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_")
+    (para "When symbols appear the start of lists, they are interpreted as
+     the names of " (link "tags") ". When symbols occur anywhere else in a
+     list, they essentially become meta information - useful to the renderers
+     or external tools that need to extract semantic information from the
+     documents."))
+
+  (section
+    (title "strings")
+    (para "Strings in " (item package "udoc") " are analgous to quoted
+    strings in the " (link-ext
+    "http://people.csail.mit.edu/rivest/Sexp.txt" "s-expression
+    specification") ".  They are a list of characters enclosed within
+    double-quote characters.  In order to place a double-quote character
+    in a string, it must be escaped with a backslash character.")
+    (para-verbatim example
+"\"example \\\"string\\\"\"")
+    (para "In order to place a literal backslash character in a string,
+    it must be escaped with a backslash character (as with the double-quote
+    character)."))
+
+  (section
+    (title "lists")
+    (para "Lists are essentially a collection of strings, symbols and other
+    lists enclosed in parentheses.")))

@@ -1,0 +1,23 @@
+(section
+  (title "hello world")
+
+  (para "The simplest possible " (item package "udoc") " document is:")
+  (para-verbatim example
+"\"hello world\"")
+
+  (para "Blank documents are not permitted in " (item package "udoc") ". They
+  serve no apparent function and the restriction of their use can make parsers
+  slightly easier to write.")
+
+  (para "A slightly more complex example can be demonstrated by printing the
+  source code to this section using the " (item tag_name (link "tag_render"
+  "render")) " tag.")
+
+  (para "Note that the content appears inside a " (item tag_name (link
+  "tag_section" "section")) ", contains references to other document sections,
+  marks certain terms such as " (item package "udoc") " with semantic
+  information (\"it's a package\") and inserts the contents of an external file
+  directly into the output text " (footnote (para
+  "It even contains a footnote.")) ".")
+
+  (para-verbatim (render "d-hello.ud")))

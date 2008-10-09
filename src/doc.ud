@@ -1,0 +1,25 @@
+(section
+  (title "document structure")
+  (contents)
+
+  (para "A " (item package "udoc") " document is written using a restricted
+  subset of " (link-ext "http://people.csail.mit.edu/rivest/Sexp.txt"
+  "s-expression") " syntax.")
+
+  (para "The three available syntactic elements in " (item package "udoc")
+  " are lists, symbols and strings. Only an informal description of each is
+   given here. Lengths of elements are only limited by RAM and/or disk space.")
+
+  (para "The current implementation of " (item package "udoc") " assumes all
+   input text is " (link-ext "http://tools.ietf.org/html/rfc3629" "UTF-8") "
+   although future implementations are intended to support all possible text
+   encodings "
+    (footnote
+      (para "This also requires all output formats to support the encodings - "
+        (item renderer (link "renderer_context" "ConTeXt")) " and "
+        (item renderer (link "renderer_nroff" "nroff")) " currently do not."))
+   ".")
+
+  (include "d-syntax.ud")
+  (include "d-hello.ud")
+)

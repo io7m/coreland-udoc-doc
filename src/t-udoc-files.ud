@@ -5,7 +5,7 @@
   (section
     (title "synopsis")
     (para-verbatim
-"udoc-files [-hnV] [-L lev] [-s threshold] [-r renderer] file outdir"))
+"udoc-files [-hV] [-L lev] [-s threshold] [-r renderer] file"))
 
   (section
     (title "description")
