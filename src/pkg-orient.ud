@@ -65,4 +65,159 @@
     to essentially allow any degree of control that would have been
     possible had the output text been hand-written."))
 
+  ; rationale
+
+  (section
+    (title "comparison with other systems")
+
+    (para "Ease of hand writing?"
+      (table comparison
+        (t-row
+          (item "plain")
+          (item "nroff")
+          (item "XHTML")
+          (item "ConTeXt")
+          (item "XML")
+          (item "DocBook/XML")
+          (item "Brand-X Word Processor")
+          (item "udoc"))
+        (t-row
+          (item "easy")
+          (item "moderate")
+          (item "hard")
+          (item "moderate/hard")
+          (item "hard")
+          (item "hard")
+          (item "easy")
+          (item "easy"))))
+
+    (para "Ease of parsing?"
+      (table comparison
+        (t-row
+          (item "plain")
+          (item "nroff")
+          (item "XHTML")
+          (item "ConTeXt")
+          (item "XML")
+          (item "DocBook/XML")
+          (item "Brand-X Word Processor")
+          (item "udoc"))
+        (t-row
+          (item "impossible")
+          (item "moderate")
+          (item "hard")
+          (item "very hard")
+          (item "hard")
+          (item "hard")
+          (item "hard")
+          (item "easy"))))
+
+    (para "Human readable?"
+      (table comparison
+        (t-row
+          (item "plain")
+          (item "nroff")
+          (item "XHTML")
+          (item "ConTeXt")
+          (item "XML")
+          (item "DocBook/XML")
+          (item "Brand-X Word Processor")
+          (item "udoc"))
+        (t-row
+          (item "yes")
+          (item "partially")
+          (item "partially")
+          (item "barely")
+          (item "partially")
+          (item "partially")
+          (item "no")
+          (item "mostly"))))
+
+    (para "Machine readable?"
+      (table comparison
+        (t-row
+          (item "plain")
+          (item "nroff")
+          (item "XHTML")
+          (item "ConTeXt")
+          (item "XML")
+          (item "DocBook/XML")
+          (item "Brand-X Word Processor")
+          (item "udoc"))
+        (t-row
+          (item "no")
+          (item "yes")
+          (item "yes")
+          (item "yes")
+          (item "yes")
+          (item "yes")
+          (item "yes" (footnote (item "If using a non-proprietary format.")))
+          (item "yes"))))
+
+    (para "Metadata / semantics?"
+      (table comparison
+        (t-row
+          (item "plain")
+          (item "nroff")
+          (item "XHTML")
+          (item "ConTeXt")
+          (item "XML")
+          (item "DocBook/XML")
+          (item "Brand-X Word Processor")
+          (item "udoc"))
+        (t-row
+          (item "no")
+          (item "no")
+          (item "maybe" (footnote (item "Using CSS classes to tag elements.")))
+          (item "maybe" (footnote (item "Using custom macros everywhere.")))
+          (item "yes")
+          (item "yes")
+          (item "no")
+          (item "yes"))))
+
+    (para "Automatic formatting?"
+      (table comparison
+        (t-row
+          (item "plain")
+          (item "nroff")
+          (item "XHTML")
+          (item "ConTeXt")
+          (item "XML")
+          (item "DocBook/XML")
+          (item "Brand-X Word Processor")
+          (item "udoc"))
+        (t-row
+          (item "no")
+          (item "yes")
+          (item "no")
+          (item "yes")
+          (item "no")
+          (item "yes")
+          (item "maybe")
+          (item "yes"))))
+
+    (para "Cooperates easily with external tools?"
+      (table comparison
+        (t-row
+          (item "plain")
+          (item "nroff")
+          (item "XHTML")
+          (item "ConTeXt")
+          (item "XML")
+          (item "DocBook/XML")
+          (item "Brand-X Word Processor")
+          (item "udoc"))
+        (t-row
+          (item "yes")
+          (item "yes")
+          (item "yes" (footnote (item "Requires an XML parser for most useful work.")))
+          (item "yes") 
+          (item "yes" (footnote (item "As with XHTML.")))
+          (item "yes" (footnote (item "As with XML.")))
+          (item "no")
+          (item "yes"))))
+
+    (para "Actual mileage may vary.")
+  )
+
 ) ; end of section

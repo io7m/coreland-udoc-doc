@@ -71,6 +71,12 @@ table.supported td {
   padding-right: 3em;
 }
 
+table.comparison { }
+table.comparison td {
+  vertical-align: top;
+  padding-right: 3em;
+}
+
 .example {
   border: 1px solid #ddd;
   padding: 1em;
