@@ -6,17 +6,6 @@
     (para
       "This software is known to compile and pass all tests on the following
       systems.")
-    (para-verbatim
-"Fields are:
-  
-OS OSVERSION COMPILER COMPILER_VERSION ARCH
-  
-OS - Operating system
-OSVERSION - Operating system version
-COMPILER - C compiler
-COMPILER_VERSION - C compiler version (0.0.0 if version number could not be detected)
-ARCH - Hardware architecture"
-)
     (include "m_supp.ud"))
 
   (section

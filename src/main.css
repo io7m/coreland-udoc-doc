@@ -31,13 +31,15 @@ hr {
 .ud_footnote_tab { }
 
 .command,
+.constant,
 .filename,
-.func,
-.func_param,
+.function,
+.function_param,
 .package,
 .struct,
 .struct_field,
-.tag_name
+.tag_name,
+.variable
 {
   font-family: monospace;
 }
@@ -59,6 +61,12 @@ table.escape_table td {
 
 table.package_deps { }
 table.package_deps td {
+  vertical-align: top;
+  padding-right: 3em;
+}
+
+table.supported { }
+table.supported td {
   vertical-align: top;
   padding-right: 3em;
 }
