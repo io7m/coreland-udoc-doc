@@ -9,9 +9,9 @@
     (para (item package "udoc") " is a package to process abstract
     documents written as " (link-ext
     "http://people.csail.mit.edu/rivest/Sexp.txt" "s-expressions") " and
-    produce output in various formats. It is similar to " (link-ext
-    "http://www.docbook.org/" "DocBook") " but only defines structural,
-    not semantic, elements."))
+    produce output in various formats. It is similar to " (include
+    "u-docbook.ud") " but only defines structural, not semantic,
+    elements."))
 
     (para (item package "udoc") " is not intended to replace XML or any
     other generic markup language. It is a documentation language, meant
@@ -69,6 +69,36 @@
 
   (section
     (title "comparison with other systems")
+
+    (para "This section gives an informal and no doubt controversial
+      set of comparisons with other documentation system choices.")
+
+    (para "Other systems:"
+      (table comparison
+        (t-row
+          (item "plain")
+          (item "Plain, hand-written, unstructured text."))
+        (t-row
+          (item "nroff")
+          (item "The nroff typesetter."))
+        (t-row
+          (item "XHTML")
+          (item "Hand-written XHTML."))
+        (t-row
+          (item "ConTeXt")
+          (item "The " (include "u-context.ud") " publishing system, a set of TeX macros."))
+        (t-row
+          (item "XML")
+          (item "Plain, hand-written XML."))
+        (t-row
+          (item "DocBook/XML")
+          (item (include "u-docbook.ud") " implemented as an XML schema."))
+        (t-row
+          (item "Brand-X Word Processor")
+          (item "Generic office productivity prevention."))
+        (t-row
+          (item "udoc")
+          (item "This package."))))
 
     (para "Ease of hand writing?"
       (table comparison
