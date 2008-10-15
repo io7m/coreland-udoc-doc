@@ -17,7 +17,7 @@
   "tag_section" "section")) ", contains references to other document sections,
   marks certain terms such as " (item package "udoc") " with semantic
   information (\"it's a package\") and inserts the contents of an external file
-  directly into the output text " (footnote (para
-  "It even contains a footnote.")) ".")
+  directly into the output text " (footnote (item "It even contains a
+  footnote.")) ".")
 
   (para-verbatim (render "d-hello.ud")))

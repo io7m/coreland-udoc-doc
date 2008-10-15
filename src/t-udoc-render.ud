@@ -5,13 +5,13 @@
   (section
     (title "synopsis")
     (para-verbatim
-"udoc-render [-hnV] [-L lev] [-s threshold] [-r renderer] file outdir"))
+"udoc-render [-hnV] [-L lev] [-s threshold] [-r renderer] [-w width] file outdir"))
 
   (section
     (title "description")
     (para "The " (item command "udoc-render") " command renders a given
-    document. The document " (item filename "file") " is processed and
-    output files are written to the directory " (item filename "outdir")
+    document. The document " (item file_name "file") " is processed and
+    output files are written to the directory " (item file_name "outdir")
     ". The document is validated before rendering."))
 
   (section
@@ -26,6 +26,9 @@
         (t-row
           (item "-r renderer")
           (item "Select renderer."))
+        (t-row
+          (item "-w width")
+          (item "Select maximum page width for character based renderers."))
         (t-row
           (item "-L level")
           (item "Set log verbosity."))

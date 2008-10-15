@@ -1,0 +1,32 @@
+(section
+  (ref "splitting")
+  (title "splitting")
+
+  (para "As previously mentioned, " (item package "udoc") " has many
+    different rendering backends. Some of these backends ("
+    (link "renderer_xhtml" "XHTML") " for example) may support file
+    splitting. This essentially means that the output of a renderer
+    is placed into a series of interlinked files.")
+
+  (para (item package "udoc") " determines how the files are split
+    using a simple numeric threshold value and the "
+    (item tag_name (link "tag_section" "section")) " tag.")
+
+  (para "When a section is reached with a depth of less than that
+    of the threshold value, a new output file is started
+    by the renderer. As an example, with a threshold value of "
+    (item constant "2") ":")
+
+  (para-verbatim example
+"(para \"This text is rendered in the first file.\")
+(section
+  (para \"This section creates a new file.\")
+  (section
+    (para \"This section creates a new file.\")
+    (section
+      (para \"This is rendered in the same file as the previous section.\"))))")
+
+  (para "Some renderers do not support true file splitting but can use the
+    threshold value as a \"hint\" to control the formatting of the output
+    text. Check the " (link "renderers" "documentation") " of the renderers for
+    details."))

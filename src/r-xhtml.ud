@@ -74,24 +74,42 @@ Say hello [1].
 
     (section
       (title "render")
-      (para "The " (item tag_name (link "tag_render" "render")) " tag specifies
-       the name of a file (sans file extension) to be inserted immediately into
-       the output text. The file extension is assumed to be \""
-       (item filename ".html") "\"."))
+      (para "When called with a filename " (item file_name "fn") " which lacks
+        a suffix, the renderer will attempt to open " (item file_name "fn") "."
+        (item file_suffix "html") "."))
+
+    (section
+      (title "render-noescape")
+      (para "When called with a filename " (item file_name "fn") " which lacks
+        a suffix, the renderer will attempt to open " (item file_name "fn") "."
+        (item file_suffix "html") "."))
 
     (section
       (title "render-header")
-      (para "The " (item tag_name (link "tag_render_header" "render-header"))
-       " tag specifies the name of a file (sans file extension) to be inserted
-       at the top of every page in the output text. The file extension is
-       assumed to be \"" (item filename ".html") "\"."))
+      (para "When called with a filename " (item file_name "fn") " which lacks
+        a suffix, the renderer will attempt to open " (item file_name "fn") "."
+        (item file_suffix "html") ". The file will be inserted at the top of
+        every page in the output text."))
 
     (section
       (title "render-footer")
-      (para "The " (item tag_name (link "tag_render_footer" "render-footer"))
-       " tag specifies the name of a file (sans file extension) to be inserted
-       at the bottom of every page in the output text. The file extension is
-       assumed to be \"" (item filename ".html") "\"."))
+      (para "When called with a filename " (item file_name "fn") " which lacks
+        a suffix, the renderer will attempt to open " (item file_name "fn") "."
+        (item file_suffix "html") ". The file will be inserted at the bottom
+        of every page in the output text."))
+
+    (section
+      (title "section")
+      (para "The " (item tag_name (link "tag_section" "section")) " tag will
+        cause the renderer to create a new output file when the depth of the
+        tag is less than or equal to the " (link "splitting" "split threshold")
+	      ". Each section is rendered with a title, set with the " (item
+	      tag_name (link "tag_title" "title")) " tag and the title itself
+	      is preceded by an HTML anchor.")
+      (para "The anchor is of the form:")
+      (para-verbatim example
+"sect_N.N.N")
+      (para "Where " (item code "N.N.N") " is the section number."))
 
     (section
       (title "style")
@@ -104,4 +122,6 @@ Say hello [1].
 "(style \"main\")
   
 <link rel=\"stylesheet\" type=\"text/css\" href=\"main.css\"/>
-"))))
+"))
+
+))

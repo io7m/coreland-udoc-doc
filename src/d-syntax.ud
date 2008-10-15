@@ -25,7 +25,8 @@
 "\"example \\\"string\\\"\"")
     (para "In order to place a literal backslash character in a string,
     it must be escaped with a backslash character (as with the double-quote
-    character)."))
+    character).")
+    (para "Zero-length strings (\"\") are not permitted."))
 
   (section
     (title "lists")

@@ -10,8 +10,8 @@
   allows direct insertion of code into the output.")
 
   (para "As an example of usage, the " (item tag_name "render-noescape")
-  " tag is the standard way to insert diagrams into ConTeXt code, or
-  images into HTML.")
+  " tag is the standard way to insert diagrams into " (include "u-context.ud")
+  " code, or images into HTML.")
 
   (section
     (title "specification")

@@ -10,7 +10,7 @@
   (section
     (title "description")
     (para "The " (item command "udoc-valid") " command parses and validates the
-    document " (item filename "file") ". If the document is invalid or not
+    document " (item file_name "file") ". If the document is invalid or not
     well-formed, errors are printed to standard error and the command exits with
     a nonzero exit code. If the document is well-formed and valid, the command
     prints nothing and exits normally."))

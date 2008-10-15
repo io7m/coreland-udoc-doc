@@ -23,7 +23,7 @@
     listing the origins of each file in the distribution.")
 
   (para
-    "Every file in the " (item filename "SYSDEPS") " subdirectory
+    "Every file in the " (item file_name "SYSDEPS") " subdirectory
     is an original implementation taken from an internally developed
     package by the name of " (item package "sysdeps"
     (footnote (link-ext "/code/sysdeps"))) ". This package
@@ -31,7 +31,7 @@
     entirety.")
 
   (para
-    "Every file in the " (item filename "UNIT_TESTS") " subdirectory
+    "Every file in the " (item file_name "UNIT_TESTS") " subdirectory
     is an original implementation for the library and is in the public
     domain.")
 

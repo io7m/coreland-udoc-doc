@@ -15,11 +15,12 @@
    although future implementations are intended to support all possible text
    encodings "
     (footnote
-      (para "This also requires all output formats to support the encodings - "
+      (item "This also requires all output formats to support the encodings - "
         (item renderer (link "renderer_context" "ConTeXt")) " and "
         (item renderer (link "renderer_nroff" "nroff")) " currently do not."))
    ".")
 
   (include "d-syntax.ud")
   (include "d-hello.ud")
+  (include "d-split.ud")
 )

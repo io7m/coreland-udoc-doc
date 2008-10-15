@@ -32,7 +32,8 @@ hr {
 
 .command,
 .constant,
-.filename,
+.file_name,
+.file_suffix,
 .function,
 .function_param,
 .package,

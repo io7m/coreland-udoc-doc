@@ -76,41 +76,41 @@
     (para "Other systems:"
       (table comparison
         (t-row
-          (item "plain")
+          (item package "plain")
           (item "Plain, hand-written, unstructured text."))
         (t-row
-          (item "nroff")
+          (item package "nroff")
           (item "The nroff typesetter."))
         (t-row
-          (item "XHTML")
+          (item package "XHTML")
           (item "Hand-written XHTML."))
         (t-row
-          (item "ConTeXt")
+          (item package "ConTeXt")
           (item "The " (include "u-context.ud") " publishing system, a set of TeX macros."))
         (t-row
-          (item "XML")
+          (item package "XML")
           (item "Plain, hand-written XML."))
         (t-row
-          (item "DocBook/XML")
+          (item package "DocBook/XML")
           (item (include "u-docbook.ud") " implemented as an XML schema."))
         (t-row
-          (item "Brand-X Word Processor")
+          (item package "Brand-X Word Processor")
           (item "Generic office productivity prevention."))
         (t-row
-          (item "udoc")
+          (item package "udoc")
           (item "This package."))))
 
     (para "Ease of hand writing?"
       (table comparison
         (t-row
-          (item "plain")
-          (item "nroff")
-          (item "XHTML")
-          (item "ConTeXt")
-          (item "XML")
-          (item "DocBook/XML")
-          (item "Brand-X Word Processor")
-          (item "udoc"))
+          (item package "plain")
+          (item package "nroff")
+          (item package "XHTML")
+          (item package "ConTeXt")
+          (item package "XML")
+          (item package "DocBook/XML")
+          (item package "Brand-X Word Processor")
+          (item package "udoc"))
         (t-row
           (item "easy")
           (item "moderate")
@@ -124,14 +124,14 @@
     (para "Ease of parsing?"
       (table comparison
         (t-row
-          (item "plain")
-          (item "nroff")
-          (item "XHTML")
-          (item "ConTeXt")
-          (item "XML")
-          (item "DocBook/XML")
-          (item "Brand-X Word Processor")
-          (item "udoc"))
+          (item package "plain")
+          (item package "nroff")
+          (item package "XHTML")
+          (item package "ConTeXt")
+          (item package "XML")
+          (item package "DocBook/XML")
+          (item package "Brand-X Word Processor")
+          (item package "udoc"))
         (t-row
           (item "impossible")
           (item "moderate")
@@ -145,14 +145,14 @@
     (para "Human readable?"
       (table comparison
         (t-row
-          (item "plain")
-          (item "nroff")
-          (item "XHTML")
-          (item "ConTeXt")
-          (item "XML")
-          (item "DocBook/XML")
-          (item "Brand-X Word Processor")
-          (item "udoc"))
+          (item package "plain")
+          (item package "nroff")
+          (item package "XHTML")
+          (item package "ConTeXt")
+          (item package "XML")
+          (item package "DocBook/XML")
+          (item package "Brand-X Word Processor")
+          (item package "udoc"))
         (t-row
           (item "yes")
           (item "partially")
@@ -166,14 +166,14 @@
     (para "Machine readable?"
       (table comparison
         (t-row
-          (item "plain")
-          (item "nroff")
-          (item "XHTML")
-          (item "ConTeXt")
-          (item "XML")
-          (item "DocBook/XML")
-          (item "Brand-X Word Processor")
-          (item "udoc"))
+          (item package "plain")
+          (item package "nroff")
+          (item package "XHTML")
+          (item package "ConTeXt")
+          (item package "XML")
+          (item package "DocBook/XML")
+          (item package "Brand-X Word Processor")
+          (item package "udoc"))
         (t-row
           (item "no")
           (item "yes")
@@ -187,14 +187,14 @@
     (para "Metadata / semantics?"
       (table comparison
         (t-row
-          (item "plain")
-          (item "nroff")
-          (item "XHTML")
-          (item "ConTeXt")
-          (item "XML")
-          (item "DocBook/XML")
-          (item "Brand-X Word Processor")
-          (item "udoc"))
+          (item package "plain")
+          (item package "nroff")
+          (item package "XHTML")
+          (item package "ConTeXt")
+          (item package "XML")
+          (item package "DocBook/XML")
+          (item package "Brand-X Word Processor")
+          (item package "udoc"))
         (t-row
           (item "no")
           (item "no")
@@ -208,14 +208,14 @@
     (para "Automatic formatting?"
       (table comparison
         (t-row
-          (item "plain")
-          (item "nroff")
-          (item "XHTML")
-          (item "ConTeXt")
-          (item "XML")
-          (item "DocBook/XML")
-          (item "Brand-X Word Processor")
-          (item "udoc"))
+          (item package "plain")
+          (item package "nroff")
+          (item package "XHTML")
+          (item package "ConTeXt")
+          (item package "XML")
+          (item package "DocBook/XML")
+          (item package "Brand-X Word Processor")
+          (item package "udoc"))
         (t-row
           (item "no")
           (item "yes")
@@ -229,14 +229,14 @@
     (para "Cooperates easily with external tools?"
       (table comparison
         (t-row
-          (item "plain")
-          (item "nroff")
-          (item "XHTML")
-          (item "ConTeXt")
-          (item "XML")
-          (item "DocBook/XML")
-          (item "Brand-X Word Processor")
-          (item "udoc"))
+          (item package "plain")
+          (item package "nroff")
+          (item package "XHTML")
+          (item package "ConTeXt")
+          (item package "XML")
+          (item package "DocBook/XML")
+          (item package "Brand-X Word Processor")
+          (item package "udoc"))
         (t-row
           (item "yes")
           (item "yes")

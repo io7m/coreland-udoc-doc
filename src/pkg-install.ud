@@ -17,24 +17,24 @@
           (item "configuration file")
           (item "description"))
         (t-row
-          (item filename "/usr/local/share/coreland/udoc-repos")
-          (item filename "conf-repos")
+          (item file_name "/usr/local/share/coreland/udoc-repos")
+          (item file_name "conf-repos")
           (item "Source code repository."))
         (t-row
-          (item filename "/usr/local/lib/coreland/udoc-static")
-          (item filename "conf-slibdir")
+          (item file_name "/usr/local/lib/coreland/udoc-static")
+          (item file_name "conf-slibdir")
           (item "Static library directory."))
         (t-row
-          (item filename "/usr/local/lib/coreland/udoc")
-          (item filename "conf-dlibdir")
+          (item file_name "/usr/local/lib/coreland/udoc")
+          (item file_name "conf-dlibdir")
           (item "Dynamic library directory."))
         (t-row
-          (item filename "/usr/local/include/coreland/udoc")
-          (item filename "conf-incdir")
+          (item file_name "/usr/local/include/coreland/udoc")
+          (item file_name "conf-incdir")
           (item "Header file directory."))
         (t-row
-          (item filename "/usr/local/bin")
-          (item filename "conf-bindir")
+          (item file_name "/usr/local/bin")
+          (item file_name "conf-bindir")
           (item "Executable directory.")))))
 
   ; compilation requirements

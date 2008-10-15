@@ -2,55 +2,76 @@
   (ref "renderer_context")
   (title "ConTeXt")
   (para
-    "The " (item renderer "ConTeXt") " renderer outputs ConTeXt code which
-     can then be processed into DVI file "
-      (footnote (link-ext "http://www.math.umd.edu/~asnowden/comp-cont/dvi.html"))
-     " and then into a variety of formats such as Postscript, PDF, SVG, HTML.")
+    "The " (item renderer "ConTeXt") " renderer outputs " (include
+    "u-context.ud") " code which can then be processed into DVI file "
+      (footnote (link-ext
+      "http://www.math.umd.edu/~asnowden/comp-cont/dvi.html"))
+     " and then into a variety of formats such as Postscript, PDF, SVG and
+     HTML.")
 
   (section
     (title "tags")
 
     (section
       (title "link")
-      (para "When the ConTeXt output is processed into PDF using most DVI to PDF
-       processors, the " (item tag_name (link "tag_link" "link")) " tag creates
-       a clickable link to the specified "
+      (para "When the " (include "u-context.ud") " output is processed
+      into PDF using most DVI to PDF
+       processors, the " (item tag_name (link "tag_link" "link")) " tag
+       creates a clickable link to the specified "
       (item tag_name (link "tag_ref" "ref")) " element."))
 
     (section
       (title "link-ext")
-      (para "When the ConTeXt output is processed into PDF using most DVI to PDF 
-       processors the " (item tag_name (link "tag_link_ext" "link-ext")) " tag
-       creates a clickable link to the specified URL."))
+      (para "When the " (include "u-context.ud") " output is processed
+      into PDF using most DVI to PDF
+       processors the " (item tag_name (link "tag_link_ext" "link-ext"))
+       " tag creates a clickable link to the specified URL."))
 
     (section
       (title "render")
-      (para "The " (item tag_name (link "tag_render" "render")) " tag specifies
-       the name of a file (sans file extension) to be inserted immediately into
-       the output text. The file extension is assumed to be \""
-       (item filename ".tex") "\"."))
+      (para "When called with a filename " (item file_name "fn") " which lacks
+        a suffix, the renderer will attempt to open " (item file_name "fn") "."
+        (item file_suffix "tex") "."))
+
+    (section
+      (title "render-noescape")
+      (para "When called with a filename " (item file_name "fn") " which lacks
+        a suffix, the renderer will attempt to open " (item file_name "fn") "."
+        (item file_suffix "tex") "."))
 
     (section
       (title "render-header")
-      (para "The " (item tag_name (link "tag_render_header" "render-header"))
-       " tag specifies the name of a file (sans file extension) to be inserted
-       at the top of the output text. The file extension is
-       assumed to be \"" (item filename ".tex") "\"."))
+      (para "When called with a filename " (item file_name "fn") " which lacks
+        a suffix, the renderer will attempt to open " (item file_name "fn") "."
+        (item file_suffix "tex") "."))
 
     (section
       (title "render-footer")
-      (para "The " (item tag_name (link "tag_render_footer" "render-footer"))
-       " tag specifies the name of a file (sans file extension) to be inserted
-       at the bottom of the output text. The file extension is
-       assumed to be \"" (item filename ".tex") "\"."))
+      (para "When called with a filename " (item file_name "fn") " which lacks
+        a suffix, the renderer will attempt to open " (item file_name "fn") "."
+        (item file_suffix "tex") "."))
+
+    (section
+      (title "section")
+      (para "The renderer uses the " (item tag_name (link "tag_section"
+      "section")) " tag to split the output text into " (include "u-context.ud")
+      " chapters, sections, etc.")
+      (para "As the output is always rendered as a single file, the "
+        (link "splitting" "split threshold") " is used as a
+        hint to determine the structural significance of the section (whether
+        the section becomes a chapter, section, subsection, etc). This allows
+        " (include "u-context.ud") " to handle the splitting itself.")
+      (para "Note that " (item package "udoc") " overrides "
+        (include "u-context.ud") " chapter numbering so that a document will
+        have consistent numbering across formats."))
 
     (section
       (title "style")
-      (para "The " (item tag_name (link "tag_style" "style")) " tag specifies
-       the name of an external ConTeXt file (sans file extension) to be
-       inserted at the very beginning of the output text, before any other
-       document content. The file extension is assumed to be \""
-      (item filename ".tex") "\".")
+      (para "The " (item tag_name (link "tag_style" "style")) " tag
+       specifies the name of an external " (include "u-context.ud") " file (sans
+       file extension) to be inserted at the very beginning of the
+       output text, before any other document content. The file
+       extension is assumed to be " (item file_suffix ".tex") ".")
  
       (para-verbatim example
 "(style \"main\")

@@ -17,7 +17,7 @@
 
   (para "The tag's second, optional parameter is a string of text that
   will be displayed instead of the reference name, when using an output
-  format that is capable of it (HTML, ConTeXt, etc).")
+  format that is capable of it (HTML, " (include "u-context.ud") ", etc).")
 
   (section
     (title "specification")

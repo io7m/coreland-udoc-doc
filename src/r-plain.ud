@@ -68,24 +68,27 @@ the example site (http://example.org)"))
 
     (section
       (title "render")
-      (para "The " (item tag_name (link "tag_render" "render")) " tag specifies
-      the name of a file (sans file extension) to be inserted immediately into
-      the output text. The file extension is assumed to be \""
-      (item filename ".txt") "\"."))
+      (para "When called with a filename " (item file_name "fn") " which lacks
+        a suffix, the renderer will attempt to open " (item file_name "fn") "."
+        (item file_suffix "txt") "."))
+
+    (section
+      (title "render-noescape")
+      (para "When called with a filename " (item file_name "fn") " which lacks
+        a suffix, the renderer will attempt to open " (item file_name "fn") "."
+        (item file_suffix "txt") "."))
 
     (section
       (title "render-header")
-      (para "The " (item tag_name (link "tag_render_header" "render-header"))
-      " tag specifies the name of a file (sans file extension) to be inserted
-      at the top of the output text. The file extension is
-      assumed to be \"" (item filename ".txt") "\"."))
+      (para "When called with a filename " (item file_name "fn") " which lacks
+        a suffix, the renderer will attempt to open " (item file_name "fn") "."
+        (item file_suffix "txt") "."))
 
     (section
       (title "render-footer")
-      (para "The " (item tag_name (link "tag_render_footer" "render-footer"))
-      " tag specifies the name of a file (sans file extension) to be inserted
-      at the bottom of the output text. The file extension is
-      assumed to be \"" (item filename ".txt") "\"."))
+      (para "When called with a filename " (item file_name "fn") " which lacks
+        a suffix, the renderer will attempt to open " (item file_name "fn") "."
+        (item file_suffix "txt") "."))
 
     (section
       (title "style")
