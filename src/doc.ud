@@ -23,4 +23,5 @@
   (include "d-syntax.ud")
   (include "d-hello.ud")
   (include "d-split.ud")
+  (include "d-space.ud")
 )
