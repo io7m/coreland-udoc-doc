@@ -1,84 +1,142 @@
-all: pdf ps dvi html-split html-single css plain nroff
+all: html-split html-single css pdf dvi ps txt nroff local
 
-name = udoc
+html-split: build/_html-split.done
+html-single: build/_html-single.done
+css: build/_css.done
+pdf: build/_pdf.done
+dvi: build/_dvi.done
+ps: build/_ps.done
+txt: build/_txt.done
+nroff: build/_nroff.done
+meta: release/meta
+local: build/_local.done
 
-pdf: release/$(name).pdf
-ps: release/$(name).ps
-dvi: release/$(name).dvi
-html-split: release/0.html
-html-single: release/$(name).html
-css: release/main.css
-plain: release/$(name).txt
-nroff: release/$(name).nrf
-
-generated_sources = src/m_docid.ud src/m_docid.txt src/m_pkg.ud src/m_supp.ud \
-	src/m_title.ud src/m_title.txt
+generated_sources = \
+src/m_docid.ud meta/id \
+src/m_pkg.ud   src/m_supp.ud \
+src/m_title.ud meta/title_full \
+src/footer.html src/header.html \
+src/footer.txt src/header.txt \
+src/main.tex
 
 #----------------------------------------------------------------------
 # meta
 
-src/m_docid.txt: src/m_docid.sh
-	(cd src && ./m_docid.sh > m_docid.txt.tmp && mv m_docid.txt.tmp m_docid.txt)
-src/m_docid.ud: src/m_docid_ud.sh src/m_docid.txt
-	(cd src && ./m_docid_ud.sh > m_docid.ud.tmp && mv m_docid.ud.tmp m_docid.ud)
-src/m_pkg.ud: src/m_pkg_ud.sh src/m_pkg.txt
-	(cd src && ./m_pkg_ud.sh > m_pkg.ud.tmp && mv m_pkg.ud.tmp m_pkg.ud)
-src/m_supp.ud: src/m_supp.sh
-	(cd src && ./m_supp.sh m_supp.txt > m_supp.ud.tmp && mv m_supp.ud.tmp m_supp.ud)
-src/m_title.txt: src/m_title.sh src/m_pkg.txt
-	(cd src && ./m_title.sh > m_title.txt.tmp && mv m_title.txt.tmp m_title.txt)
-src/m_title.ud: src/m_title_ud.sh src/m_title.txt
-	(cd src && ./m_title_ud.sh > m_title.ud.tmp && mv m_title.ud.tmp m_title.ud)
+meta/id: mk-docid meta/id_prefix
+	./mk-docid meta/id_prefix > meta/id.tmp && mv meta/id.tmp meta/id
+src/m_docid.ud: mk-ud-docid meta/id
+	./mk-ud-docid meta/id > src/m_docid.ud.tmp && mv src/m_docid.ud.tmp src/m_docid.ud
+src/m_pkg.ud: mk-ud-pkg meta/pkg
+	./mk-ud-pkg meta/pkg > src/m_pkg.ud.tmp && mv src/m_pkg.ud.tmp src/m_pkg.ud
+src/m_supp.ud: mk-ud-supp
+	./mk-ud-supp meta/supported > src/m_supp.ud.tmp && mv src/m_supp.ud.tmp src/m_supp.ud
+meta/title_full: mk-title meta/pkg meta/title
+	./mk-title meta/pkg meta/title > meta/title_full.tmp && mv meta/title_full.tmp meta/title_full
+src/m_title.ud: mk-ud-title meta/title_full
+	./mk-ud-title meta/title_full > src/m_title.ud.tmp && mv src/m_title.ud.tmp src/m_title.ud
 
 #----------------------------------------------------------------------
+# source generation
 
-build/0.tex: src/main.ud $(generated_sources)
-	(cd src && udoc-render -s 1 -r context main.ud ../build)
+src/footer.html: meta/title_full mk-html-footer
+	./mk-html-footer meta/title_full > src/footer.html.tmp && mv src/footer.html.tmp src/footer.html
+src/header.html: meta/title_full mk-html-header
+	./mk-html-header meta/title_full > src/header.html.tmp && mv src/header.html.tmp src/header.html
+src/footer.txt: meta/title_full mk-txt-footer
+	./mk-txt-footer meta/title_full > src/footer.txt.tmp && mv src/footer.txt.tmp src/footer.txt
+src/header.txt: meta/title_full mk-txt-header
+	./mk-txt-header meta/title_full > src/header.txt.tmp && mv src/header.txt.tmp src/header.txt
+src/main.tex: meta/title_full mk-tex-code
+	./mk-tex-code meta/title_full > src/main.tex.tmp && mv src/main.tex.tmp src/main.tex
 
-build/$(name).dvi: build/0.tex $(generated_sources)
-	(cd build && texexec 0.tex && mv 0.dvi $(name).dvi)
-release/$(name).dvi: build/$(name).dvi
-	cp build/$(name).dvi release/$(name).dvi
+#----------------------------------------------------------------------
+# build targets
 
-build/$(name).pdf: build/0.tex
-	(cd build && texexec --pdf 0.tex && mv 0.pdf $(name).pdf)
-release/$(name).pdf: build/$(name).pdf
-	cp build/$(name).pdf release/$(name).pdf
-
-build/$(name).ps: build/$(name).pdf
-	(cd build && pdf2ps $(name).pdf $(name).ps)
-release/$(name).ps: build/$(name).ps
-	cp build/$(name).ps release/$(name).ps
-
-release/$(name).html: src/main.ud $(generated_sources)
-	(cd src && udoc-render -s 0 -r xhtml main.ud ../build)
-	cp build/0.html release/$(name).html
-
-release/0.html: src/main.ud $(generated_sources)
-	(cd src && udoc-render -s 2 -r xhtml main.ud ../build)
+build/_html-split.done:\
+meta/id src/main.ud release build $(generated_sources)
+	(cd src && udoc-render \
+		-c `head -n 1 ../conf/xh-toc` \
+		-s `head -n 1 ../conf/xh-split` \
+		-r xhtml main.ud ../build)
 	cp build/*.html release
+	touch build/_html-split.done
 
-release/main.css: src/main.css
+build/_html-single.done:\
+meta/id src/main.ud release build $(generated_sources)
+	(cd src && udoc-render \
+		-c `head -n 1 ../conf/xh-toc` \
+		-s 0 \
+		-r xhtml main.ud ../build)
+	cp build/0.html release/single.html
+	touch build/_html-single.done
+
+build/_css.done: src/main.css
 	cp src/main.css build
 	cp build/main.css release
+	touch build/_css.done
 
-release/$(name).txt: src/main.ud $(generated_sources)
+build/_txt.done:\
+meta/id meta/pkg src/main.ud pkg-name release build \
+$(generated_sources)
 	(cd src && udoc-render -r plain main.ud ../build)
-	cp build/0.txt release/$(name).txt
+	cp build/0.txt release/`./pkg-name meta/pkg`.txt
+	touch build/_txt.done
 
-release/$(name).nrf: src/main.ud $(generated_sources)
+build/_nroff.done:\
+meta/id meta/pkg src/main.ud pkg-name release build \
+$(generated_sources)
 	(cd src && udoc-render -r nroff main.ud ../build)
-	cp build/0.nrf release/$(name).nrf
+	cp build/0.nrf release/`./pkg-name meta/pkg`.nrf
+	touch build/_nroff.done
 
-image-data:
-	cp src/*.png build
-	cp build/*.png release
+build/0.tex:\
+meta/id meta/pkg src/main.ud release build conf/ctex-split $(generated_sources)
+	(cd src && udoc-render \
+		-s `head -n 1 ../conf/ctex-split` \
+		-r context main.ud ../build)
+
+build/_dvi.done:\
+meta/id meta/pkg src/main.ud build/0.tex pkg-name release build \
+$(generated_sources)
+	(cd build && texexec --dvi 0.tex)
+	cp build/0.dvi release/`./pkg-name meta/pkg`.dvi
+	touch build/_dvi.done
+
+build/_pdf.done:\
+meta/id meta/pkg src/main.ud build/0.tex pkg-name release build \
+$(generated_sources)
+	(cd build && texexec --pdf 0.tex)
+	cp build/0.pdf release/`./pkg-name meta/pkg`.pdf
+	touch build/_pdf.done
+
+build/_ps.done:\
+meta/id meta/pkg src/main.ud build/0.pdf pkg-name release build \
+$(generated_sources)
+	(cd build && pdf2ps 0.pdf)
+	cp build/0.ps release/`./pkg-name meta/pkg`.ps
+	touch build/_ps.done
+
+build/_local.done:\
+local.sh
+	./local.sh
+
+release:
+	mkdir release
+
+build:
+	mkdir build
+
+release/meta: meta/id meta/title_full meta/pkg pkg-meta pkg-name
+	./pkg-meta
+
+package: meta pkg-make pkg-name meta/pkg
+	./pkg-make
 
 #----------------------------------------------------------------------
 
 clean:
 	rm -f $(generated_sources)
-	rm -f build/*
-	rm -f release/*
+	rm -rf build
+	rm -rf release
 
 clean-all: clean
