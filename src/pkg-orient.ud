@@ -100,9 +100,10 @@
           (item package "udoc")
           (item "This package."))))
 
-    (para "Ease of hand writing?"
+    (para "Attribute comparison:"
       (table comparison
         (t-row
+          (item attribute " ")
           (item package "plain")
           (item package "nroff")
           (item package "XHTML")
@@ -112,6 +113,7 @@
           (item package "Brand-X Word Processor")
           (item package "udoc"))
         (t-row
+          (item "Ease of hand writing?")
           (item "easy")
           (item "moderate")
           (item "hard")
@@ -119,20 +121,9 @@
           (item "hard")
           (item "hard")
           (item "easy")
-          (item "easy"))))
-
-    (para "Ease of parsing?"
-      (table comparison
+          (item "easy"))
         (t-row
-          (item package "plain")
-          (item package "nroff")
-          (item package "XHTML")
-          (item package "ConTeXt")
-          (item package "XML")
-          (item package "DocBook/XML")
-          (item package "Brand-X Word Processor")
-          (item package "udoc"))
-        (t-row
+          (item "Ease of parsing?")
           (item "impossible")
           (item "moderate")
           (item "hard")
@@ -140,20 +131,9 @@
           (item "hard")
           (item "hard")
           (item "hard")
-          (item "easy"))))
-
-    (para "Human readable?"
-      (table comparison
+          (item "easy"))
         (t-row
-          (item package "plain")
-          (item package "nroff")
-          (item package "XHTML")
-          (item package "ConTeXt")
-          (item package "XML")
-          (item package "DocBook/XML")
-          (item package "Brand-X Word Processor")
-          (item package "udoc"))
-        (t-row
+          (item "Human readable?")
           (item "yes")
           (item "partially")
           (item "partially")
@@ -161,20 +141,9 @@
           (item "partially")
           (item "partially")
           (item "no")
-          (item "mostly"))))
-
-    (para "Machine readable?"
-      (table comparison
+          (item "mostly"))
         (t-row
-          (item package "plain")
-          (item package "nroff")
-          (item package "XHTML")
-          (item package "ConTeXt")
-          (item package "XML")
-          (item package "DocBook/XML")
-          (item package "Brand-X Word Processor")
-          (item package "udoc"))
-        (t-row
+          (item "Machine readable?")
           (item "no")
           (item "yes")
           (item "yes")
@@ -182,20 +151,9 @@
           (item "yes")
           (item "yes")
           (item "yes" (footnote (item "If using a non-proprietary format.")))
-          (item "yes"))))
-
-    (para "Metadata / semantics?"
-      (table comparison
+          (item "yes"))
         (t-row
-          (item package "plain")
-          (item package "nroff")
-          (item package "XHTML")
-          (item package "ConTeXt")
-          (item package "XML")
-          (item package "DocBook/XML")
-          (item package "Brand-X Word Processor")
-          (item package "udoc"))
-        (t-row
+          (item "Metadata / semantics?")
           (item "no")
           (item "no")
           (item "maybe" (footnote (item "Using CSS classes to tag elements.")))
@@ -203,20 +161,9 @@
           (item "yes")
           (item "yes")
           (item "no")
-          (item "yes"))))
-
-    (para "Automatic formatting?"
-      (table comparison
+          (item "yes"))
         (t-row
-          (item package "plain")
-          (item package "nroff")
-          (item package "XHTML")
-          (item package "ConTeXt")
-          (item package "XML")
-          (item package "DocBook/XML")
-          (item package "Brand-X Word Processor")
-          (item package "udoc"))
-        (t-row
+          (item "Automatic formatting?")
           (item "no")
           (item "yes")
           (item "no")
@@ -224,20 +171,9 @@
           (item "no")
           (item "yes")
           (item "maybe")
-          (item "yes"))))
-
-    (para "Cooperates easily with external tools?"
-      (table comparison
+          (item "yes"))
         (t-row
-          (item package "plain")
-          (item package "nroff")
-          (item package "XHTML")
-          (item package "ConTeXt")
-          (item package "XML")
-          (item package "DocBook/XML")
-          (item package "Brand-X Word Processor")
-          (item package "udoc"))
-        (t-row
+          (item "Cooperates easily with external tools?")
           (item "yes")
           (item "yes")
           (item "yes" (footnote (item "Requires an XML parser for most useful work.")))
