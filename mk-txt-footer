@@ -1,0 +1,14 @@
+#!/bin/sh
+
+if [ $# -ne 1 ]
+then
+  echo "mk-txt-footer: usage: file" 1>&2
+  exit 111
+fi
+
+title=`head -n 1 "$1"` || exit 1
+cat <<EOF
+------------------------------------------------------------------------------
+http://coreland.ath.cx/doc - ${title}
+
+EOF
