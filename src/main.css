@@ -85,6 +85,10 @@ table.comparison td {
   padding-right: 3em;
 }
 
+table.attribute td {
+  padding-right: 3em;
+}
+
 .example {
   border: 1px solid #ddd;
   padding: 1em;
